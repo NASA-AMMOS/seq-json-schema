@@ -13,7 +13,7 @@
   "scripts": {
     "format": "prettier --write .",
     "test": "node --no-warnings test/test.js",
-    "types": "json2ts --input schema.json --output types.ts --unreachableDefinitions && npm run format"
+    "types": "json2ts --input schema.json --output types.ts && npm run format"
   },
   "devDependencies": {
     "ajv": "^8.12.0",
