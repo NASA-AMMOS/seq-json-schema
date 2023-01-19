@@ -1,0 +1,12 @@
+{
+  "id": "variable_enum_with_float_allowable",
+  "metadata": {},
+  "parameters": [
+    {
+      "enum_name": "ONBOARD_ENUM",
+      "name": "enum_param",
+      "type": "ENUM",
+      "allowable_values": [1.3]
+    }
+  ]
+}

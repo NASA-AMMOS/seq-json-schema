@@ -1,0 +1,10 @@
+{
+  "id": "variable_nonaccepted_type",
+  "metadata": {},
+  "locals": [
+    {
+      "name": "local_variable_1",
+      "type": "NONACCEPTED_TYPE"
+    }
+  ]
+}

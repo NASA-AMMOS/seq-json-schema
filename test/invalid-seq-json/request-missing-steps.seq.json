@@ -1,0 +1,12 @@
+{
+  "id": "request_missing_steps",
+  "metadata": {},
+  "requests": [
+    {
+      "description": "Absolute-timed request object with missing steps",
+      "name": "test_request1",
+      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+      "type": "request"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "request_and_time",
+  "metadata": {},
+  "requests": [
+    {
+      "description": "Absolute-timed request object with all possible fields",
+      "name": "test_request1",
+      "steps": [
+        {
+          "stem": "FAKE_COMMAND1",
+          "time": { "tag": "00:00:01.000", "type": "COMMAND_RELATIVE" },
+          "type": "command",
+          "args": []
+        }
+      ],
+      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+      "type": "request",
+      "metadata": { "metadata_key": 7 }
+    }
+  ]
+}

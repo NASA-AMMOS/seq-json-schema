@@ -1,0 +1,6 @@
+.DS_Store
+*.egg-info
+seq-json-schema/*.json
+build
+dist
+node_modules

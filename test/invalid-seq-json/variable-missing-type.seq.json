@@ -1,0 +1,9 @@
+{
+  "id": "variable_missing_type",
+  "metadata": {},
+  "locals": [
+    {
+      "name": "local_variable_1"
+    }
+  ]
+}

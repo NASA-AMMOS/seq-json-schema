@@ -1,0 +1,11 @@
+{
+  "id": "variable_incorrect_enum_name_pattern",
+  "metadata": {},
+  "parameters": [
+    {
+      "enum_name": "123ONBOARD_ENUM",
+      "name": "enum_param",
+      "type": "ENUM"
+    }
+  ]
+}

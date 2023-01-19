@@ -1,0 +1,76 @@
+{
+  "id": "variable_sequence",
+  "locals": [
+    {
+      "name": "STRING_LOCAL",
+      "type": "STRING"
+    },
+    {
+      "name": "UINT_LOCAL",
+      "type": "UINT"
+    },
+    {
+      "name": "INT_LOCAL",
+      "type": "INT"
+    },
+    {
+      "name": "FLOAT_LOCAL",
+      "type": "FLOAT"
+    },
+    {
+      "name": "ENUM_LOCAL",
+      "type": "ENUM",
+      "enum_name": "ONBOARD_ENUM_01"
+    },
+    {
+      "name": "STRING_WITH_VALS",
+      "type": "STRING",
+      "allowable_values": ["ONE", "TWO", "THREE"]
+    },
+    {
+      "name": "ENUM_WITH_VALS",
+      "type": "ENUM",
+      "enum_name": "ONBOARD_ENUM_02",
+      "allowable_values": ["ONE", "TWO"]
+    },
+    {
+      "name": "UINT_WITH_VALS",
+      "type": "UINT",
+      "allowable_values": [1, 2, 3]
+    },
+    {
+      "name": "INT_WITH_RANGES",
+      "type": "INT",
+      "allowable_ranges": [
+        {
+          "min": 1,
+          "max": 2
+        },
+        {
+          "min": 600,
+          "max": 800
+        }
+      ]
+    },
+    {
+      "name": "STRING_WITH_SC_NAME",
+      "type": "STRING",
+      "sc_name": "LCS"
+    }
+  ],
+  "metadata": {
+    "onboard_name": "variable_sequence",
+    "onboard_path": "variable_path"
+  },
+  "steps": [
+    {
+      "stem": "CMD_NOOP",
+      "time": {
+        "tag": "00:00:01.000",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command",
+      "args": []
+    }
+  ]
+}

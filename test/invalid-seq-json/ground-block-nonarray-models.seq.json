@@ -1,0 +1,23 @@
+{
+  "id": "ground_block_nonarray_models",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [
+        "SEQSTR",
+        "2019-365T00:00:00",
+        "2020-025T00:00:00",
+        "BOTH",
+        "",
+        "",
+        "real_time_cmds"
+      ],
+      "description": "Ground activity step with nonarray models field.",
+      "models": 7,
+      "name": "SEQTRAN_directive",
+      "time": { "tag": "00:00:01.000", "type": "COMMAND_RELATIVE" },
+      "type": "ground_block",
+      "metadata": { "stringfield": "stringval" }
+    }
+  ]
+}

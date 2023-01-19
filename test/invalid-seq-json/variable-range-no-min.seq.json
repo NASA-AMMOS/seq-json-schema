@@ -1,0 +1,15 @@
+{
+  "id": "variable_range_no_min",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "INT_ARG",
+      "type": "INT",
+      "allowable_ranges": [
+        {
+          "max": 2
+        }
+      ]
+    }
+  ]
+}

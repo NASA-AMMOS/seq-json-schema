@@ -1,0 +1,19 @@
+{
+  "id": "ground_epoch_nonstring_name",
+  "metadata": {},
+  "requests": [
+    {
+      "description": "Ground-epoch timed request object with nonstring name",
+      "ground_epoch": { "delta": "+00:30:00", "name": 7 },
+      "name": "test_request1",
+      "steps": [
+        {
+          "stem": "FAKE_COMMAND1",
+          "time": { "tag": "00:00:01.000", "type": "COMMAND_RELATIVE" },
+          "type": "command"
+        }
+      ],
+      "type": "request"
+    }
+  ]
+}

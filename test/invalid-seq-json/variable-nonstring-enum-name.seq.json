@@ -1,0 +1,11 @@
+{
+  "id": "variable_nonstring_enum_name",
+  "metadata": {},
+  "parameters": [
+    {
+      "enum_name": 7,
+      "name": "enum_param",
+      "type": "ENUM"
+    }
+  ]
+}

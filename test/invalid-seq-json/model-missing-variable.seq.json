@@ -1,0 +1,16 @@
+{
+  "id": "model_missing_variable",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [{ "var": "Local_Var_A" }, { "var": "Global_Var_B" }],
+      "description": "Epoch-relative activate step for test.mod into engine 2 missing sequence.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "models": [{ "offset": "00:00:00.000", "value": "1.234" }],
+      "sequence": "d:/eng/test.mod",
+      "time": { "tag": "00:00:01.000", "type": "EPOCH_RELATIVE" },
+      "type": "load"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "variable_nonarray_allowable_ranges",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "INT_ARG",
+      "type": "INT",
+      "allowable_ranges": 3
+    }
+  ]
+}

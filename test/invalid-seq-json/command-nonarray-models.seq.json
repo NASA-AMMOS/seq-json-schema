@@ -1,0 +1,15 @@
+{
+  "id": "command_nonarray_models",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [30, 4.3, false, "test_string"],
+      "description": "Absolute-timed standard command step with nonarray models.",
+      "models": 7,
+      "stem": "FAKE_COMMAND1",
+      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+      "type": "command",
+      "metadata": {}
+    }
+  ]
+}

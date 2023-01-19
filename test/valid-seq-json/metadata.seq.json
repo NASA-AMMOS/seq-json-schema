@@ -1,0 +1,9 @@
+{
+  "id": "metadata",
+  "metadata": {
+    "onboard_path": "/eng",
+    "onboard_name": "test.mod",
+    "lgo": false,
+    "other_arbitrary_metadata": "test_metadata"
+  }
+}

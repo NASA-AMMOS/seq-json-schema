@@ -1,0 +1,11 @@
+{
+  "id": "variable_float_with_string_allowable",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "FLOAT_ARG",
+      "type": "FLOAT",
+      "allowable_values": ["VALUE"]
+    }
+  ]
+}

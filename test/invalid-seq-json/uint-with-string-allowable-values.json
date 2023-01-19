@@ -1,0 +1,11 @@
+{
+  "id": "uint_with_string_allowable_values",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "UINT_ARG",
+      "type": "INT",
+      "allowable_values": ["1", "2"]
+    }
+  ]
+}

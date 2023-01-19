@@ -1,0 +1,20 @@
+{
+  "id": "request_with_time_and_epoch",
+  "metadata": {},
+  "requests": [
+    {
+      "description": "Absolute-timed request object with time and epoch",
+      "name": "test_request1",
+      "steps": [
+        {
+          "stem": "FAKE_COMMAND1",
+          "time": { "tag": "00:00:01.000", "type": "COMMAND_RELATIVE" },
+          "type": "command"
+        }
+      ],
+      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+      "ground_epoch": { "delta": "+00:30:00", "name": "test_ground_epoch" },
+      "type": "request"
+    }
+  ]
+}

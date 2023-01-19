@@ -1,0 +1,16 @@
+{
+  "id": "variable_range_nonnumber_max",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "INT_ARG",
+      "type": "INT",
+      "allowable_ranges": [
+        {
+          "min": 2,
+          "max": "VALUE"
+        }
+      ]
+    }
+  ]
+}

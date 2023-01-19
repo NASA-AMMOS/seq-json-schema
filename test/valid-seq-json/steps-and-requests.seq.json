@@ -1,0 +1,96 @@
+{
+  "id": "steps_and_requests",
+  "metadata": {
+    "onboard_name": "test",
+    "onboard_path": "test"
+  },
+  "requests": [
+    {
+      "description": "Absolute-timed request object with all possible fields",
+      "name": "test_request1",
+      "steps": [
+        {
+          "stem": "FAKE_COMMAND1",
+          "time": {
+            "tag": "00:00:01.000",
+            "type": "COMMAND_RELATIVE"
+          },
+          "type": "command",
+          "args": []
+        }
+      ],
+      "time": {
+        "tag": "2020-173T20:00:00.000",
+        "type": "ABSOLUTE"
+      },
+      "type": "request"
+    },
+    {
+      "description": "Ground-epoch timed request object with all possible fields",
+      "ground_epoch": {
+        "delta": "+00:30:00",
+        "name": "test_ground_epoch"
+      },
+      "name": "test_request1",
+      "steps": [
+        {
+          "stem": "FAKE_COMMAND1",
+          "time": {
+            "tag": "00:00:01.000",
+            "type": "COMMAND_RELATIVE"
+          },
+          "type": "command",
+          "args": []
+        }
+      ],
+      "type": "request"
+    }
+  ],
+  "steps": [
+    {
+      "args": [30, 4.3, true, "test_string"],
+      "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "value": "1.234",
+          "variable": "model_var_float"
+        }
+      ],
+      "sequence": "d:/eng/test.mod",
+      "time": {
+        "tag": "00:00:01.000",
+        "type": "EPOCH_RELATIVE"
+      },
+      "type": "activate"
+    },
+    {
+      "args": [
+        30,
+        4.3,
+        false,
+        "test_string",
+        {
+          "symbol": "Global_Var_A"
+        }
+      ],
+      "description": "Absolute-timed standard command step with all possible fields.",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "value": "1.234",
+          "variable": "model_var_float"
+        }
+      ],
+      "stem": "FAKE_COMMAND1",
+      "time": {
+        "tag": "2020-173T20:00:00.000",
+        "type": "ABSOLUTE"
+      },
+      "type": "command",
+      "args": []
+    }
+  ]
+}

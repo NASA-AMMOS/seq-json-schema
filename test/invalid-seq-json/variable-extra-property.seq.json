@@ -1,0 +1,12 @@
+{
+  "id": "variable_extra_property",
+  "metadata": {},
+  "parameters": [
+    {
+      "enum_name": "ONBOARD_ENUM",
+      "name": "enum_param",
+      "type": "ENUM",
+      "extra_property": "value"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "ground_event_nonstring_name",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [
+        "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf",
+        "d:/tmp/eng_nom_htr_off.mod"
+      ],
+      "description": "Ground event step with nonstring name.",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "variable": "model_var_float",
+          "value": "1.234"
+        },
+        {
+          "offset": "00:00:00.001",
+          "variable": "model_var_int",
+          "value": "-1234"
+        },
+        {
+          "offset": "01:02:03.000",
+          "variable": "model_var_string",
+          "value": "Model test string"
+        },
+        {
+          "offset": "10:00:00.000",
+          "variable": "model_var_uint",
+          "value": "1234"
+        }
+      ],
+      "name": 7,
+      "time": { "type": "COMMAND_COMPLETE" },
+      "type": "ground_event",
+      "metadata": { "listfield": ["1", 2] }
+    }
+  ]
+}

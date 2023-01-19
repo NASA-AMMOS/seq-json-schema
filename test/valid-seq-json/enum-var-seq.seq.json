@@ -1,0 +1,11 @@
+{
+  "id": "enum_var_seq",
+  "metadata": {},
+  "parameters": [
+    {
+      "enum_name": "ONBOARD_ENUM",
+      "name": "enum_param",
+      "type": "ENUM"
+    }
+  ]
+}

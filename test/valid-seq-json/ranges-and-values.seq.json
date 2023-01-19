@@ -1,0 +1,21 @@
+{
+  "id": "ranges_and_values",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "INT_ARG",
+      "type": "INT",
+      "allowable_ranges": [
+        {
+          "min": 1,
+          "max": 2
+        },
+        {
+          "min": 600,
+          "max": 800
+        }
+      ],
+      "allowable_values": [1, 2, 600, 800]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "variable_nonstring_name",
+  "metadata": {},
+  "locals": [
+    {
+      "name": 7,
+      "type": "FLOAT"
+    }
+  ]
+}

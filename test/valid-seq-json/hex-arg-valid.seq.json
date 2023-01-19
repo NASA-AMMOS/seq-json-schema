@@ -1,0 +1,16 @@
+{
+  "id": "hex",
+  "metadata": {},
+  "steps": [
+    {
+      "stem": "HEXCMD",
+      "description": "hex argument without 0x prefix",
+      "args": [{ "hex": "0x0001AC34" }],
+      "time": {
+        "tag": "2020-173T20:00:00.000",
+        "type": "ABSOLUTE"
+      },
+      "type": "command"
+    }
+  ]
+}

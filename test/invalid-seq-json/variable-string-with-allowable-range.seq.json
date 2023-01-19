@@ -1,0 +1,16 @@
+{
+  "id": "variable_string_with_allowable_range",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "STRING_ARG",
+      "type": "STRING",
+      "allowable_ranges": [
+        {
+          "min": 1,
+          "max": 2
+        }
+      ]
+    }
+  ]
+}

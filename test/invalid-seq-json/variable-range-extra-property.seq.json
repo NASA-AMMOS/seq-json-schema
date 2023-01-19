@@ -1,0 +1,17 @@
+{
+  "id": "variable_range_extra_property",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "INT_ARG",
+      "type": "INT",
+      "allowable_ranges": [
+        {
+          "min": 1,
+          "max": 2,
+          "extra_property": 3
+        }
+      ]
+    }
+  ]
+}

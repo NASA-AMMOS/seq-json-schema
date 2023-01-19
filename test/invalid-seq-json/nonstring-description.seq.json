@@ -1,0 +1,36 @@
+{
+  "id": "nonstring_description",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [30, 4.3, false, "test_string"],
+      "description": 7,
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "variable": "model_var_float",
+          "value": "1.234"
+        },
+        {
+          "offset": "00:00:00.001",
+          "variable": "model_var_int",
+          "value": "-1234"
+        },
+        {
+          "offset": "01:02:03.000",
+          "variable": "model_var_string",
+          "value": "Model test string"
+        },
+        {
+          "offset": "10:00:00.000",
+          "variable": "model_var_uint",
+          "value": "1234"
+        }
+      ],
+      "stem": "FAKE_COMMAND1",
+      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+      "type": "command",
+      "metadata": {}
+    }
+  ]
+}

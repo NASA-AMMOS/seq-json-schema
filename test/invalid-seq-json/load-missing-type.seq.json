@@ -1,0 +1,36 @@
+{
+  "id": "load_missing_type",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [{ "var": "Local_Var_A" }, { "var": "Global_Var_B" }],
+      "description": "Epoch-relative activate step for test.mod into engine 2 missing type.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "variable": "model_var_float",
+          "value": "1.234"
+        },
+        {
+          "offset": "00:00:00.001",
+          "variable": "model_var_int",
+          "value": "-1234"
+        },
+        {
+          "offset": "01:02:03.000",
+          "variable": "model_var_string",
+          "value": "Model test string"
+        },
+        {
+          "offset": "10:00:00.000",
+          "variable": "model_var_uint",
+          "value": "1234"
+        }
+      ],
+      "sequence": "d:/eng/test.mod",
+      "time": { "tag": "00:00:01.000", "type": "EPOCH_RELATIVE" }
+    }
+  ]
+}

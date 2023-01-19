@@ -1,0 +1,18 @@
+{
+  "id": "ground_event_nonarray_models",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [
+        "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf",
+        "d:/tmp/eng_nom_htr_off.mod"
+      ],
+      "description": "Ground event step with nonarray models.",
+      "models": 7,
+      "name": "UPLINK_SEQUENCE_FILE",
+      "time": { "type": "COMMAND_COMPLETE" },
+      "type": "ground_event",
+      "metadata": { "listfield": ["1", 2] }
+    }
+  ]
+}

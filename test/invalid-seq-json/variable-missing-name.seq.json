@@ -1,0 +1,9 @@
+{
+  "id": "variable_missing_name",
+  "metadata": {},
+  "locals": [
+    {
+      "type": "FLOAT"
+    }
+  ]
+}

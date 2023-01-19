@@ -1,0 +1,19 @@
+{
+  "id": "request_nonstring_name",
+  "metadata": {},
+  "requests": [
+    {
+      "description": "Absolute-timed request object with nonstring name",
+      "steps": [
+        {
+          "stem": "FAKE_COMMAND1",
+          "time": { "tag": "00:00:01.000", "type": "COMMAND_RELATIVE" },
+          "type": "command"
+        }
+      ],
+      "name": 7,
+      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+      "type": "request"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "time_nonstring_tag",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [30, 4.3, true, "test_string"],
+      "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "variable": "model_var_float",
+          "value": "1.234"
+        },
+        {
+          "offset": "00:00:00.001",
+          "variable": "model_var_int",
+          "value": "-1234"
+        },
+        {
+          "offset": "01:02:03.000",
+          "variable": "model_var_string",
+          "value": "Model test string"
+        },
+        {
+          "offset": "10:00:00.000",
+          "variable": "model_var_uint",
+          "value": "1234"
+        }
+      ],
+      "sequence": "d:/eng/test.mod",
+      "time": { "tag": 7, "type": "EPOCH_RELATIVE" },
+      "type": "activate"
+    }
+  ]
+}

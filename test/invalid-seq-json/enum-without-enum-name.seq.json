@@ -1,0 +1,10 @@
+{
+  "id": "enum_without_enum_name",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "ENUM_VAR",
+      "type": "ENUM"
+    }
+  ]
+}

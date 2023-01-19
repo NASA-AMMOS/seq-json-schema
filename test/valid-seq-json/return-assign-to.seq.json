@@ -1,0 +1,23 @@
+{
+  "id": "return_assign_to",
+  "metadata": {},
+  "locals": [
+    {
+      "name": "local_lcs",
+      "type": "UINT",
+      "sc_name": "LCS"
+    }
+  ],
+  "steps": [
+    {
+      "stem": "FAKE_COMMAND1",
+      "args": [],
+      "time": {
+        "tag": "00:00:01.000",
+        "type": "COMMAND_RELATIVE"
+      },
+      "type": "command",
+      "return_assign_to": "local_lcs"
+    }
+  ]
+}

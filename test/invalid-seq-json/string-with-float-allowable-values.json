@@ -1,0 +1,11 @@
+{
+  "id": "string_with_float_allowable_values",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "STRING_ARG",
+      "type": "STRING",
+      "allowable_values": [1.0, 2.2, 600.666, 800.10903]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "variable_int_with_string_allowable",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "INT_ARG",
+      "type": "INT",
+      "allowable_values": ["VALUE"]
+    }
+  ]
+}

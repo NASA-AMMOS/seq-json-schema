@@ -1,0 +1,17 @@
+{
+  "id": "variable_enum_with_allowable_range",
+  "metadata": {},
+  "parameters": [
+    {
+      "enum_name": "ONBOARD_ENUM",
+      "name": "enum_param",
+      "type": "ENUM",
+      "allowable_ranges": [
+        {
+          "min": 1,
+          "max": 2
+        }
+      ]
+    }
+  ]
+}

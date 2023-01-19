@@ -1,0 +1,18 @@
+{
+  "id": "request_with_time_and_epoch",
+  "metadata": {},
+  "requests": [
+    {
+      "description": "Absolute-timed request object missing time/epoch",
+      "name": "test_request1",
+      "steps": [
+        {
+          "stem": "FAKE_COMMAND1",
+          "time": { "tag": "00:00:01.000", "type": "COMMAND_RELATIVE" },
+          "type": "command"
+        }
+      ],
+      "type": "request"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "string_with_enum_name",
+  "metadata": {},
+  "parameters": [
+    {
+      "name": "STRING_VAR",
+      "type": "STRING",
+      "enum_name": "ONBOARD_ENUM"
+    }
+  ]
+}
