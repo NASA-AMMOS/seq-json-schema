@@ -8,13 +8,13 @@ You can read the schema definition [here](./schema.json).
 ### Install
 
 ```sh
-npm install seq-json-schema --save
+npm install @nasa-jpl/seq-json-schema --save
 ```
 
 ### Basic Usage
 
 ```ts
-import * as seqSchema from 'seq-json-schema/schema.json';
+import * as seqSchema from '@nasa-jpl/seq-json-schema/schema.json';
 console.log(seqSchema);
 ```
 
