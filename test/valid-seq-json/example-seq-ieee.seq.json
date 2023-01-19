@@ -16,13 +16,11 @@
       "stem": "TURN_IMAGER_HEATER_ON",
       "args": ["SIDE_A"],
       "description": "Absolute-timed command to turn a heater on, with simulated telemetry change 5 minutes later.",
-      "models": [
-        {"offset": "00:05:00", "variable": "IMAGER_A_WARMED_UP", "value": true}
-      ]
+      "models": [{ "offset": "00:05:00", "variable": "IMAGER_A_WARMED_UP", "value": true }]
     },
     {
       "type": "activate",
-      "time": { "tag": "00:10:00.000", "type": "COMMAND_RELATIVE"},
+      "time": { "tag": "00:10:00.000", "type": "COMMAND_RELATIVE" },
       "engine": 2,
       "sequence": "/eng/configure_imager.seq",
       "args": ["MOSAIC", true, 10],
@@ -30,7 +28,7 @@
     },
     {
       "type": "command",
-      "time": {"type": "EPOCH_RELATIVE", "tag": "-00:00:15.54"},
+      "time": { "type": "EPOCH_RELATIVE", "tag": "-00:00:15.54" },
       "stem": "TAKE_IMAGE",
       "args": ["HI_RES"],
       "description": "Epoch-relative timed command, with metadata",
@@ -49,10 +47,7 @@
       "type": "ground_event",
       "time": { "tag": "2020-174T04:40:00.000", "type": "ABSOLUTE" },
       "name": "SIMULATE_FILE_UPLINK",
-      "args": [
-        "/usr/mschaffe/ganymede_flyby_046_images.seq.json",
-        "/eng/ganymede_flyby_046_images.seq"
-      ],
+      "args": ["/usr/mschaffe/ganymede_flyby_046_images.seq.json", "/eng/ganymede_flyby_046_images.seq"],
       "description": "Ground event step, simulating a file uplink (not a real command)"
     }
   ]

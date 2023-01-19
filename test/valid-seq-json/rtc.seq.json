@@ -1,26 +1,25 @@
 {
-    "id": "rtc_valid_1",
-    "metadata": {
+  "id": "rtc_valid_1",
+  "metadata": {},
+  "hardware_commands": [
+    {
+      "stem": "HWC",
+      "description": "hardware command",
+      "metadata": {}
+    }
+  ],
+  "immediate_commands": [
+    {
+      "stem": "IC",
+      "args": ["1", 2, 3.0],
+      "description": "immediate command",
+      "metadata": {}
     },
-    "hardware_commands": [
-        {
-            "stem": "HWC",
-            "description": "hardware command",
-            "metadata": {}
-        }
-    ],
-    "immediate_commands": [
-        {
-            "stem": "IC",
-            "args": ["1", 2, 3.0],
-            "description": "immediate command",
-            "metadata": {}
-        },
-        {
-            "stem": "NOOP",
-            "description": "noop command, no arguments",
-            "metadata": {"processor": "VC1A"},
-            "args": []
-        }
-    ]
+    {
+      "stem": "NOOP",
+      "description": "noop command, no arguments",
+      "metadata": { "processor": "VC1A" },
+      "args": []
+    }
+  ]
 }

@@ -105,15 +105,7 @@
       "metadata": {}
     },
     {
-      "args": [
-        "SEQSTR",
-        "2019-365T00:00:00",
-        "2020-025T00:00:00",
-        "BOTH",
-        "",
-        "",
-        "real_time_cmds"
-      ],
+      "args": ["SEQSTR", "2019-365T00:00:00", "2020-025T00:00:00", "BOTH", "", "", "real_time_cmds"],
       "description": "Ground activity step with required fields.",
       "models": [
         {

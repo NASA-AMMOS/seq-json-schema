@@ -1,6 +1,6 @@
 {
-    "id": "test",
-    "metadata": {
-        "onboard_path": ["eng/seq"]
-    }
+  "id": "test",
+  "metadata": {
+    "onboard_path": ["eng/seq"]
+  }
 }

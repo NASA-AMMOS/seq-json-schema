@@ -1,12 +1,11 @@
 {
-    "id": "rtc_valid_1",
-    "metadata": {
-    },
-    "immediate_commands": [
-        {
-            "stem": "NOOP",
-            "description": "noop command, no arguments",
-            "metadata": {"processor": "VC1A"}
-        }
-    ]
+  "id": "rtc_valid_1",
+  "metadata": {},
+  "immediate_commands": [
+    {
+      "stem": "NOOP",
+      "description": "noop command, no arguments",
+      "metadata": { "processor": "VC1A" }
+    }
+  ]
 }
