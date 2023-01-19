@@ -14,7 +14,7 @@ npm install @nasa-jpl/seq-json-schema --save
 ### Basic Usage
 
 ```ts
-import * as seqSchema from '@nasa-jpl/seq-json-schema/schema.json';
+import seqSchema from '@nasa-jpl/seq-json-schema/schema.json' assert { type: 'json' };
 console.log(seqSchema);
 ```
 

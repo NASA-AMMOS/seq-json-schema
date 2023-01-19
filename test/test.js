@@ -1,6 +1,6 @@
 import Ajv from 'ajv';
 import schema from '../schema.json' assert { type: 'json' };
-import { readdirSync, readFileSync, renameSync } from 'fs';
+import { readdirSync, readFileSync } from 'fs';
 import { exit } from 'process';
 
 function test() {
