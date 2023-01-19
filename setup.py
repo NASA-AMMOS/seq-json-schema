@@ -7,5 +7,5 @@ setup(
   name='seq-json-schema',
   packages=['seq-json-schema'],
   url='https://github.com/NASA-AMMOS/seq-json-schema',
-  version='1.0.7'
+  version='1.0.8'
 )
