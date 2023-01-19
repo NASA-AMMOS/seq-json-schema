@@ -26,8 +26,11 @@ function test() {
   }
 
   if (errors.length) {
+    console.log('❌ Some tests failed...');
     console.error(errors);
     exit(1);
+  } else {
+    console.log('✅ All tests passed!');
   }
 }
 
