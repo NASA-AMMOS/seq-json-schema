@@ -38,4 +38,4 @@ with importlib.resources.path('seq-json-schema', 'schema.json') as schemaPath:
   print(schema)
 ```
 
-If you happen to work on a python version lower than 3.7, you will have to install it as [importlib-resources](https://pypi.org/project/importlib-resources/) from PyPI.
+Note if you are using a Python version lower than 3.7 you will have to import the schema using the [importlib-resources](https://pypi.org/project/importlib-resources/) library.
