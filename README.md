@@ -1,7 +1,7 @@
 # seq-json-schema
 
 Standardized [JSON Schema](https://json-schema.org/) for authoring multi-mission sequences.  
-You can read the schema definition [here](./schema.json).
+You can read the schema definition [here](https://github.com/NASA-AMMOS/seq-json-schema/blob/develop/schema.json).
 
 ## JavaScript or TypeScript
 
