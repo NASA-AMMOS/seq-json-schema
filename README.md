@@ -18,6 +18,29 @@ import seqSchema from '@nasa-jpl/seq-json-schema/schema.json' assert { type: 'js
 console.log(seqSchema);
 ```
 
+### TypeScript Types
+
+This library also ships with automatically generated TypeScript types from the schema. For example:
+
+```ts
+import type { Command, SeqJson } from '@nasa-jpl/seq-json-schema/types';
+
+const command: Command = {
+  args: [],
+  stem: 'SEND_DATA',
+  time: { type: 'COMMAND_COMPLETE' },
+  type: 'command',
+};
+
+const seqJson: SeqJson = {
+  id: 'sequence0',
+  metadata: {},
+  steps: [command],
+};
+
+console.log(seqJson);
+```
+
 ## Python
 
 ### Install
