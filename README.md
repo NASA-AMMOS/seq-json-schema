@@ -1,5 +1,5 @@
-![npm (scoped)](https://img.shields.io/npm/v/@nasa-jpl/seq-json-schema)
-![PyPI](https://img.shields.io/pypi/v/seq-json-schema)
+[![npm (scoped)](https://img.shields.io/npm/v/@nasa-jpl/seq-json-schema)](https://www.npmjs.com/package/@nasa-jpl/seq-json-schema)
+[![PyPI](https://img.shields.io/pypi/v/seq-json-schema)](https://pypi.org/project/seq-json-schema/)
 
 # seq-json-schema
 
