@@ -1,3 +1,6 @@
+![npm (scoped)](https://img.shields.io/npm/v/@nasa-jpl/seq-json-schema)
+![PyPI](https://img.shields.io/pypi/v/seq-json-schema)
+
 # seq-json-schema
 
 Standardized [JSON Schema](https://json-schema.org/) for authoring multi-mission sequences.  
