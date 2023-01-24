@@ -12,6 +12,7 @@
   ],
   "scripts": {
     "format": "prettier --write .",
+    "prepublishOnly": "npm run types",
     "test": "node --no-warnings test/test.js",
     "types": "json2ts --input schema.json --output types.ts && npm run format"
   },
