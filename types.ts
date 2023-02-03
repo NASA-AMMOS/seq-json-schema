@@ -63,7 +63,7 @@ export type Step = Activate | Command | GroundBlock | GroundEvent | Load;
 /**
  * Array of command arguments
  */
-export type Args = (string | number | boolean | SymbolArgument | HexArgument)[];
+export type Args = (StringArgument | NumberArgument | BooleanArgument | SymbolArgument | HexArgument)[];
 export type Request1 =
   | {
       [k: string]: unknown;
@@ -163,6 +163,33 @@ export interface Activate {
   sequence: string;
   time: Time;
   type: 'activate';
+}
+/**
+ * A step argument containing a string.
+ */
+export interface StringArgument {
+  /**
+   * The value. The string must be valid.
+   */
+  string: string;
+}
+/**
+ * A step argument containing a number.
+ */
+export interface NumberArgument {
+  /**
+   * The value. The number must be valid.
+   */
+  number: number;
+}
+/**
+ * A step argument containing a boolean.
+ */
+export interface BooleanArgument {
+  /**
+   * The boolean value. The value must be all lowercase.
+   */
+  boolean: boolean;
 }
 /**
  * A step argument referencing a local or global variable, or some other symbolic name known to downstream modeling software (such as CONDITION in SEQGEN)

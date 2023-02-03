@@ -3,7 +3,7 @@
   "metadata": {},
   "steps": [
     {
-      "args": 7,
+      "args": { "number": 7 },
       "description": "Epoch-relative activate step for test.mod into engine 2 with invalid arg type.",
       "engine": 2,
       "epoch": "TEST_EPOCH",

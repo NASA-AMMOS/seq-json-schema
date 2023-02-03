@@ -3,7 +3,7 @@
   "metadata": {
     "onboard_path": "/eng",
     "onboard_name": "test.mod",
-    "lgo": false,
+    "lgo": { "boolean": false },
     "other_arbitrary_metadata": "test_metadata"
   }
 }

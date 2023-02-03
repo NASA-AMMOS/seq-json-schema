@@ -9,7 +9,13 @@
   ],
   "steps": [
     {
-      "args": [30, 4.3, true, "test_string", { "symbol": "local_float_1" }],
+      "args": [
+        { "number": 30 },
+        { "number": 4.3 },
+        { "boolean": true },
+        { "string": "test_string" },
+        { "symbol": "local_float_1" }
+      ],
       "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
       "engine": 2,
       "epoch": "TEST_EPOCH",
