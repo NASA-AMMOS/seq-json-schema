@@ -63,7 +63,14 @@ export type Step = Activate | Command | GroundBlock | GroundEvent | Load;
 /**
  * Array of command arguments
  */
-export type Args = (StringArgument | NumberArgument | BooleanArgument | SymbolArgument | HexArgument)[];
+export type Args = (
+  | StringArgument
+  | NumberArgument
+  | BooleanArgument
+  | SymbolArgument
+  | HexArgument
+  | RepeatArgument
+)[];
 export type Request1 =
   | {
       [k: string]: unknown;
@@ -208,6 +215,12 @@ export interface HexArgument {
    * The hexadecimal integer, as a string prefixed with 0x. Digits A-F must be uppercase.
    */
   hex: string;
+}
+export interface RepeatArgument {
+  /**
+   * A repeat argument, there can be a nested repeat argument inside.
+   */
+  repeat: (StringArgument | NumberArgument | BooleanArgument | SymbolArgument | HexArgument | RepeatArgument)[];
 }
 /**
  * Model object that be included with commands to set variables for modeling purposes only, usually to direct sequence execution down a particular branch during modeling.
