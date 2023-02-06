@@ -3,7 +3,7 @@
   "metadata": {
     "onboard_path": "/eng",
     "onboard_name": "test.mod",
-    "lgo": false,
+    "lgo": { "boolean": false },
     "other_arbitrary_metadata": "test_metadata"
   },
   "locals": [
@@ -44,7 +44,7 @@
   ],
   "steps": [
     {
-      "args": [30, 4.3, true, "test_string"],
+      "args": [{ "number": 30 }, { "number": 4.3 }, { "boolean": true }, { "string": "test_string" }],
       "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
       "engine": 2,
       "epoch": "TEST_EPOCH",
@@ -75,7 +75,7 @@
       "type": "activate"
     },
     {
-      "args": [30, 4.3, false, "test_string"],
+      "args": [{ "number": 30 }, { "number": 4.3 }, { "boolean": true }, { "string": "test_string" }],
       "description": "Absolute-timed standard command step with all possible fields.",
       "models": [
         {
@@ -105,7 +105,15 @@
       "metadata": {}
     },
     {
-      "args": ["SEQSTR", "2019-365T00:00:00", "2020-025T00:00:00", "BOTH", "", "", "real_time_cmds"],
+      "args": [
+        { "string": "SEQSTR" },
+        { "string": "2019-365T00:00:00" },
+        { "string": "2020-025T00:00:00" },
+        { "string": "BOTH" },
+        { "string": "" },
+        { "string": "" },
+        { "string": "real_time_cmds" }
+      ],
       "description": "Ground activity step with required fields.",
       "models": [
         {
@@ -136,8 +144,8 @@
     },
     {
       "args": [
-        "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf",
-        "d:/tmp/eng_nom_htr_off.mod"
+        { "string": "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf" },
+        { "string": "d:/tmp/eng_nom_htr_off.mod" }
       ],
       "description": "Ground event step with all possible fields.",
       "models": [

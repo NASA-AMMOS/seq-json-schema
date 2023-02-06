@@ -3,7 +3,7 @@
   "metadata": {},
   "steps": [
     {
-      "args": [30, 4.3, false, "test_string"],
+      "args": [{ "number": 30 }, { "number": 4.3 }, { "boolean": false }, { "string": "test_string" }],
       "description": "Absolute-timed standard command step with nonarray models.",
       "models": 7,
       "stem": "FAKE_COMMAND1",

@@ -3,7 +3,7 @@
   "metadata": {},
   "steps": [
     {
-      "args": [30, 4.3, true, "test_string"],
+      "args": [{ "number": 30 }, { "number": 4.3 }, { "boolean": true }, { "string": "test_string" }],
       "description": "Epoch-relative activate step for test.mod into engine 2, missing time tag.",
       "engine": 2,
       "epoch": "TEST_EPOCH",

@@ -49,13 +49,13 @@
       "items": {
         "oneOf": [
           {
-            "type": "string"
+            "$ref": "#/$defs/string_argument"
           },
           {
-            "type": "number"
+            "$ref": "#/$defs/number_argument"
           },
           {
-            "type": "boolean"
+            "$ref": "#/$defs/boolean_argument"
           },
           {
             "$ref": "#/$defs/symbol_argument"
@@ -396,6 +396,42 @@
         }
       },
       "required": ["symbol"],
+      "type": "object"
+    },
+    "string_argument": {
+      "additionalProperties": false,
+      "description": "A step argument containing a string.",
+      "properties": {
+        "string": {
+          "description": "The value. The string must be valid.",
+          "type": "string"
+        }
+      },
+      "required": ["string"],
+      "type": "object"
+    },
+    "number_argument": {
+      "additionalProperties": false,
+      "description": "A step argument containing a number.",
+      "properties": {
+        "number": {
+          "description": "The value. The number must be valid.",
+          "type": "number"
+        }
+      },
+      "required": ["number"],
+      "type": "object"
+    },
+    "boolean_argument": {
+      "additionalProperties": false,
+      "description": "A step argument containing a boolean.",
+      "properties": {
+        "boolean": {
+          "description": "The boolean value. The value must be all lowercase.",
+          "type": "boolean"
+        }
+      },
+      "required": ["boolean"],
       "type": "object"
     },
     "hex_argument": {
