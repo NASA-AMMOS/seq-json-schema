@@ -1,16 +1,16 @@
 {
   "$id": "SeqJson",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$defs": {
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "definitions": {
     "activate": {
       "additionalProperties": false,
       "description": "Activate object",
       "properties": {
         "args": {
-          "$ref": "#/$defs/args"
+          "$ref": "#/definitions/args"
         },
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "engine": {
           "type": "integer",
@@ -21,11 +21,11 @@
           "description": "Onboard epoch to pass to the sequence for derivation of epoch-relative timetags"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "models": {
           "items": {
-            "$ref": "#/$defs/model"
+            "$ref": "#/definitions/model"
           },
           "type": "array"
         },
@@ -34,7 +34,7 @@
           "description": "Onboard path and filename of sequence to be loaded."
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/definitions/time"
         },
         "type": {
           "const": "activate"
@@ -49,22 +49,22 @@
       "items": {
         "oneOf": [
           {
-            "$ref": "#/$defs/string_argument"
+            "$ref": "#/definitions/string_argument"
           },
           {
-            "$ref": "#/$defs/number_argument"
+            "$ref": "#/definitions/number_argument"
           },
           {
-            "$ref": "#/$defs/boolean_argument"
+            "$ref": "#/definitions/boolean_argument"
           },
           {
-            "$ref": "#/$defs/symbol_argument"
+            "$ref": "#/definitions/symbol_argument"
           },
           {
-            "$ref": "#/$defs/hex_argument"
+            "$ref": "#/definitions/hex_argument"
           },
           {
-            "$ref": "#/$defs/repeat_argument"
+            "$ref": "#/definitions/repeat_argument"
           }
         ]
       }
@@ -74,17 +74,17 @@
       "description": "Command object",
       "properties": {
         "args": {
-          "$ref": "#/$defs/args"
+          "$ref": "#/definitions/args"
         },
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "models": {
           "items": {
-            "$ref": "#/$defs/model"
+            "$ref": "#/definitions/model"
           },
           "type": "array"
         },
@@ -93,7 +93,7 @@
           "description": "Command stem"
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/definitions/time"
         },
         "type": {
           "const": "command"
@@ -115,17 +115,17 @@
       "description": "Ground blocks",
       "properties": {
         "args": {
-          "$ref": "#/$defs/args"
+          "$ref": "#/definitions/args"
         },
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "models": {
           "items": {
-            "$ref": "#/$defs/model"
+            "$ref": "#/definitions/model"
           },
           "type": "array"
         },
@@ -134,7 +134,7 @@
           "type": "string"
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/definitions/time"
         },
         "type": {
           "const": "ground_block"
@@ -162,17 +162,17 @@
       "description": "Ground events",
       "properties": {
         "args": {
-          "$ref": "#/$defs/args"
+          "$ref": "#/definitions/args"
         },
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "models": {
           "items": {
-            "$ref": "#/$defs/model"
+            "$ref": "#/definitions/model"
           },
           "type": "array"
         },
@@ -181,7 +181,7 @@
           "type": "string"
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/definitions/time"
         },
         "type": {
           "const": "ground_event"
@@ -195,10 +195,10 @@
       "description": "Load object",
       "properties": {
         "args": {
-          "$ref": "#/$defs/args"
+          "$ref": "#/definitions/args"
         },
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "engine": {
           "type": "integer",
@@ -209,11 +209,11 @@
           "description": "Onboard epoch to pass to the sequence for derivation of epoch-relative timetags"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "models": {
           "items": {
-            "$ref": "#/$defs/model"
+            "$ref": "#/definitions/model"
           },
           "type": "array"
         },
@@ -222,7 +222,7 @@
           "description": "Onboard path and filename of sequence to be loaded."
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/definitions/time"
         },
         "type": {
           "const": "load"
@@ -268,13 +268,13 @@
       ],
       "properties": {
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "ground_epoch": {
-          "$ref": "#/$defs/ground_epoch"
+          "$ref": "#/definitions/ground_epoch"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "name": {
           "description": "Request Name, used for tracking commands back to the original request after ground expansion. Must be unique.",
@@ -283,13 +283,13 @@
         "steps": {
           "description": "Sequence steps that are part of this request.",
           "items": {
-            "$ref": "#/$defs/step"
+            "$ref": "#/definitions/step"
           },
           "minItems": 1,
           "type": "array"
         },
         "time": {
-          "$ref": "#/$defs/time"
+          "$ref": "#/definitions/time"
         },
         "type": {
           "const": "request"
@@ -301,19 +301,19 @@
     "step": {
       "oneOf": [
         {
-          "$ref": "#/$defs/activate"
+          "$ref": "#/definitions/activate"
         },
         {
-          "$ref": "#/$defs/command"
+          "$ref": "#/definitions/command"
         },
         {
-          "$ref": "#/$defs/ground_block"
+          "$ref": "#/definitions/ground_block"
         },
         {
-          "$ref": "#/$defs/ground_event"
+          "$ref": "#/definitions/ground_event"
         },
         {
-          "$ref": "#/$defs/load"
+          "$ref": "#/definitions/load"
         }
       ]
     },
@@ -322,13 +322,13 @@
       "description": "Object representing a single Immediate Command",
       "properties": {
         "args": {
-          "$ref": "#/$defs/args"
+          "$ref": "#/definitions/args"
         },
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "stem": {
           "type": "string",
@@ -343,10 +343,10 @@
       "description": "Object representing a single Hardware Command",
       "properties": {
         "description": {
-          "$ref": "#/$defs/description"
+          "$ref": "#/definitions/description"
         },
         "metadata": {
-          "$ref": "#/$defs/metadata"
+          "$ref": "#/definitions/metadata"
         },
         "stem": {
           "type": "string",
@@ -411,22 +411,22 @@
           "items": {
             "oneOf": [
               {
-                "$ref": "#/$defs/string_argument"
+                "$ref": "#/definitions/string_argument"
               },
               {
-                "$ref": "#/$defs/number_argument"
+                "$ref": "#/definitions/number_argument"
               },
               {
-                "$ref": "#/$defs/boolean_argument"
+                "$ref": "#/definitions/boolean_argument"
               },
               {
-                "$ref": "#/$defs/symbol_argument"
+                "$ref": "#/definitions/symbol_argument"
               },
               {
-                "$ref": "#/$defs/hex_argument"
+                "$ref": "#/definitions/hex_argument"
               },
               {
-                "$ref": "#/$defs/repeat_argument"
+                "$ref": "#/definitions/repeat_argument"
               }
             ]
           }
@@ -512,7 +512,7 @@
               "description": "One or more allowable ranges of values, for FLOAT, INT, or UINT variable types.",
               "type": "array",
               "items": {
-                "$ref": "#/$defs/variable_range"
+                "$ref": "#/definitions/variable_range"
               }
             },
             "sc_name": {
@@ -591,18 +591,18 @@
     "locals": {
       "description": "Local variable declarations.",
       "items": {
-        "$ref": "#/$defs/variable_declaration"
+        "$ref": "#/definitions/variable_declaration"
       },
       "minItems": 1,
       "type": "array"
     },
     "metadata": {
-      "$ref": "#/$defs/metadata"
+      "$ref": "#/definitions/metadata"
     },
     "parameters": {
       "description": "Parameter variable declarations.",
       "items": {
-        "$ref": "#/$defs/variable_declaration"
+        "$ref": "#/definitions/variable_declaration"
       },
       "minItems": 1,
       "type": "array"
@@ -610,28 +610,28 @@
     "requests": {
       "description": "Commands groups into requests",
       "items": {
-        "$ref": "#/$defs/request"
+        "$ref": "#/definitions/request"
       },
       "type": "array"
     },
     "steps": {
       "description": "Sequence steps",
       "items": {
-        "$ref": "#/$defs/step"
+        "$ref": "#/definitions/step"
       },
       "type": "array"
     },
     "immediate_commands": {
       "description": "Immediate commands which are interpreted by FSW and not part of any sequence.",
       "items": {
-        "$ref": "#/$defs/immediate_command"
+        "$ref": "#/definitions/immediate_command"
       },
       "type": "array"
     },
     "hardware_commands": {
       "description": "Hardware commands which are not interpreted by FSW and not part of any sequence.",
       "items": {
-        "$ref": "#/$defs/hardware_command"
+        "$ref": "#/definitions/hardware_command"
       },
       "type": "array"
     }

@@ -1,4 +1,4 @@
-import Ajv from 'ajv/dist/2020.js';
+import Ajv from 'ajv';
 import schema from '../schema.json' assert { type: 'json' };
 import { readdirSync, readFileSync } from 'fs';
 import { exit } from 'process';

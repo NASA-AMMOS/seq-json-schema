@@ -1,6 +1,6 @@
 {
   "name": "@nasa-jpl/seq-json-schema",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "license": "MIT",
   "type": "module",
   "repository": {
