@@ -216,6 +216,9 @@ export interface HexArgument {
    */
   hex: string;
 }
+/**
+ * A repeat argument
+ */
 export interface RepeatArgument {
   /**
    * A repeat argument, there can be a nested repeat argument inside.

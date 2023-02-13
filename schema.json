@@ -403,7 +403,7 @@
     },
     "repeat_argument": {
       "additionalProperties": false,
-      "description": "",
+      "description": "A repeat argument",
       "properties": {
         "repeat": {
           "description": "A repeat argument, there can be a nested repeat argument inside.",
@@ -432,7 +432,8 @@
           }
         }
       },
-      "required": ["repeat"]
+      "required": ["repeat"],
+      "type": "object"
     },
     "string_argument": {
       "additionalProperties": false,

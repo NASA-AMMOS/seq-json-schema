@@ -1,0 +1,15 @@
+{
+  "id": "old-argument-style",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [30, "hello", true],
+      "stem": "HELLO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "EPOCH_RELATIVE"
+      },
+      "type": "command"
+    }
+  ]
+}
