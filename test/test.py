@@ -10,6 +10,7 @@ def test():
   invalidSeqJsonFiles = listdir(invalidSeqJsonPath)
   errors = []
 
+  # Valid Seq JSON.
   for validSeqJsonFile in validSeqJsonFiles:
     validSeqJson = load(open(f'{validSeqJsonPath}/{validSeqJsonFile}'))
     try:
@@ -17,6 +18,7 @@ def test():
     except ValidationError:
       errors.append(f'{validSeqJsonFile} should be valid')
 
+  # Invalid Seq JSON.
   for invalidSeqJsonFile in invalidSeqJsonFiles:
     invalidSeqJson = load(open(f'{invalidSeqJsonPath}/{invalidSeqJsonFile}'))
     try:
