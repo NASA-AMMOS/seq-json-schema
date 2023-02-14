@@ -1,9 +1,9 @@
 {
-  "id": "variable_argument_missing_var",
+  "id": "variable_argument_extra_property",
   "metadata": {},
   "steps": [
     {
-      "args": [{ "var": "EXAMPLE_VARIABLE", "extra_property": "value" }],
+      "args": [{ "type": "string", "value": "EXAMPLE_VARIABLE", "extra_property": "value" }],
       "description": "Epoch-relative activate step for test.mod into engine 2 with args including empty variable.",
       "engine": 2,
       "epoch": "TEST_EPOCH",

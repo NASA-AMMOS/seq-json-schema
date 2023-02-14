@@ -3,7 +3,10 @@
   "metadata": {},
   "steps": [
     {
-      "args": [{ "var": "Local_Var_A" }, { "var": "Global_Var_B" }],
+      "args": [
+        { "type": "string", "value": "Local_Var_A" },
+        { "type": "string", "value": "Global_Var_B" }
+      ],
       "description": "Epoch-relative activate step for test.mod into engine 2 with nonstring sequence.",
       "engine": 2,
       "epoch": "TEST_EPOCH",

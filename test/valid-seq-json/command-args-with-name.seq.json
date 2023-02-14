@@ -1,0 +1,17 @@
+{
+  "id": "command-args-with-names",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [
+        { "name": "arg_1", "type": "number", "value": 30 },
+        { "name": "arg_2", "type": "number", "value": 4.3 },
+        { "name": "arg_3", "type": "boolean", "value": false },
+        { "type": "string", "value": "test_string" }
+      ],
+      "stem": "FAKE_COMMAND1",
+      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+      "type": "command"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "metadata": {},
   "steps": [
     {
-      "args": [{ "number": 7 }],
+      "args": [{ "type": "number", "value": 7 }],
       "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
       "engine": 2,
       "epoch": "TEST_EPOCH",

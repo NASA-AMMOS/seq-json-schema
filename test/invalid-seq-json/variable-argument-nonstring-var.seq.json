@@ -1,9 +1,9 @@
 {
-  "id": "variable_argument_missing_var",
+  "id": "variable_argument_wrong_type",
   "metadata": {},
   "steps": [
     {
-      "args": [{ "var": 1 }],
+      "args": [{ "type": "string", "value": 1 }],
       "description": "Epoch-relative activate step for test.mod into engine 2 with args including empty variable.",
       "engine": 2,
       "epoch": "TEST_EPOCH",
