@@ -3,7 +3,12 @@
   "metadata": {},
   "steps": [
     {
-      "args": [{ "number": 30 }, { "number": 4.3 }, { "boolean": true }, { "string": "test_string" }],
+      "args": [
+        { "type": "number", "value": 30 },
+        { "type": "number", "value": 4.3 },
+        { "type": "boolean", "value": false },
+        { "type": "string", "value": "test_string" }
+      ],
       "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
       "engine": 2,
       "epoch": "TEST_EPOCH",

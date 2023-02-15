@@ -393,20 +393,36 @@
       "additionalProperties": false,
       "description": "A step argument referencing a local or global variable, or some other symbolic name known to downstream modeling software (such as CONDITION in SEQGEN)",
       "properties": {
-        "symbol": {
+        "name": {
+          "description": "An optional symbol argument name.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The symbol argument type.",
+          "const": "symbol"
+        },
+        "value": {
           "description": "The symbolic name being referenced.",
           "type": "string"
         }
       },
-      "required": ["symbol"],
+      "required": ["type", "value"],
       "type": "object"
     },
     "repeat_argument": {
       "additionalProperties": false,
-      "description": "A repeat argument",
+      "description": "An argument that can be repeated.",
       "properties": {
-        "repeat": {
-          "description": "A repeat argument, there can be a nested repeat argument inside.",
+        "name": {
+          "description": "An optional repeat argument name.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The repeat argument type.",
+          "const": "repeat"
+        },
+        "value": {
+          "description": "A repeat argument value, there can be a nested repeat arguments inside.",
           "type": "array",
           "items": {
             "oneOf": [
@@ -432,56 +448,88 @@
           }
         }
       },
-      "required": ["repeat"],
+      "required": ["type", "value"],
       "type": "object"
     },
     "string_argument": {
       "additionalProperties": false,
       "description": "A step argument containing a string.",
       "properties": {
-        "string": {
-          "description": "The value. The string must be valid.",
+        "name": {
+          "description": "An optional string argument name.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The string type.",
+          "const": "string"
+        },
+        "value": {
+          "description": "A valid string value.",
           "type": "string"
         }
       },
-      "required": ["string"],
+      "required": ["type", "value"],
       "type": "object"
     },
     "number_argument": {
       "additionalProperties": false,
       "description": "A step argument containing a number.",
       "properties": {
-        "number": {
-          "description": "The value. The number must be valid.",
+        "name": {
+          "description": "An optional number argument name.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The number type.",
+          "const": "number"
+        },
+        "value": {
+          "description": "The number value. The number must be valid.",
           "type": "number"
         }
       },
-      "required": ["number"],
+      "required": ["type", "value"],
       "type": "object"
     },
     "boolean_argument": {
       "additionalProperties": false,
       "description": "A step argument containing a boolean.",
       "properties": {
-        "boolean": {
+        "name": {
+          "description": "An optional boolean argument name.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The boolean type.",
+          "const": "boolean"
+        },
+        "value": {
           "description": "The boolean value. The value must be all lowercase.",
           "type": "boolean"
         }
       },
-      "required": ["boolean"],
+      "required": ["type", "value"],
       "type": "object"
     },
     "hex_argument": {
       "additionalProperties": false,
       "description": "A step argument containing an unsigned integer in hexadecimal format.",
       "properties": {
-        "hex": {
-          "description": "The hexadecimal integer, as a string prefixed with 0x. Digits A-F must be uppercase.",
+        "name": {
+          "description": "An optional hex argument name.",
+          "type": "string"
+        },
+        "type": {
+          "description": "The hex type.",
+          "const": "hex"
+        },
+        "value": {
+          "description": "The hexadecimal integer value, as a string prefixed with 0x. Digits A-F must be uppercase.",
           "pattern": "^0x([0-9A-F])+$",
           "type": "string"
         }
       },
-      "required": ["hex"],
+      "required": ["type", "value"],
       "type": "object"
     },
     "variable_declaration": {

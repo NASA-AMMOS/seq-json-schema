@@ -176,54 +176,102 @@ export interface Activate {
  */
 export interface StringArgument {
   /**
-   * The value. The string must be valid.
+   * An optional string argument name.
    */
-  string: string;
+  name?: string;
+  /**
+   * The string type.
+   */
+  type: 'string';
+  /**
+   * A valid string value.
+   */
+  value: string;
 }
 /**
  * A step argument containing a number.
  */
 export interface NumberArgument {
   /**
-   * The value. The number must be valid.
+   * An optional number argument name.
    */
-  number: number;
+  name?: string;
+  /**
+   * The number type.
+   */
+  type: 'number';
+  /**
+   * The number value. The number must be valid.
+   */
+  value: number;
 }
 /**
  * A step argument containing a boolean.
  */
 export interface BooleanArgument {
   /**
+   * An optional boolean argument name.
+   */
+  name?: string;
+  /**
+   * The boolean type.
+   */
+  type: 'boolean';
+  /**
    * The boolean value. The value must be all lowercase.
    */
-  boolean: boolean;
+  value: boolean;
 }
 /**
  * A step argument referencing a local or global variable, or some other symbolic name known to downstream modeling software (such as CONDITION in SEQGEN)
  */
 export interface SymbolArgument {
   /**
+   * An optional symbol argument name.
+   */
+  name?: string;
+  /**
+   * The symbol argument type.
+   */
+  type: 'symbol';
+  /**
    * The symbolic name being referenced.
    */
-  symbol: string;
+  value: string;
 }
 /**
  * A step argument containing an unsigned integer in hexadecimal format.
  */
 export interface HexArgument {
   /**
-   * The hexadecimal integer, as a string prefixed with 0x. Digits A-F must be uppercase.
+   * An optional hex argument name.
    */
-  hex: string;
+  name?: string;
+  /**
+   * The hex type.
+   */
+  type: 'hex';
+  /**
+   * The hexadecimal integer value, as a string prefixed with 0x. Digits A-F must be uppercase.
+   */
+  value: string;
 }
 /**
- * A repeat argument
+ * An argument that can be repeated.
  */
 export interface RepeatArgument {
   /**
-   * A repeat argument, there can be a nested repeat argument inside.
+   * An optional repeat argument name.
    */
-  repeat: (StringArgument | NumberArgument | BooleanArgument | SymbolArgument | HexArgument | RepeatArgument)[];
+  name?: string;
+  /**
+   * The repeat argument type.
+   */
+  type: 'repeat';
+  /**
+   * A repeat argument value, there can be a nested repeat arguments inside.
+   */
+  value: (StringArgument | NumberArgument | BooleanArgument | SymbolArgument | HexArgument | RepeatArgument)[];
 }
 /**
  * Model object that be included with commands to set variables for modeling purposes only, usually to direct sequence execution down a particular branch during modeling.

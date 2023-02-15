@@ -4,8 +4,8 @@
   "steps": [
     {
       "args": [
-        { "string": "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf" },
-        { "string": "d:/tmp/eng_nom_htr_off.mod" }
+        { "type": "string", "value": "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf" },
+        { "type": "string", "value": "d:/tmp/eng_nom_htr_off.mod" }
       ],
       "description": "Ground event step with missing time.",
       "models": [

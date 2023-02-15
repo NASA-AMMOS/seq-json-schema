@@ -14,7 +14,7 @@
       "type": "command",
       "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
       "stem": "TURN_IMAGER_HEATER_ON",
-      "args": [{ "string": "SIDE_A" }],
+      "args": [{ "type": "string", "value": "SIDE_A" }],
       "description": "Absolute-timed command to turn a heater on, with simulated telemetry change 5 minutes later.",
       "models": [{ "offset": "00:05:00", "variable": "IMAGER_A_WARMED_UP", "value": true }]
     },
@@ -23,14 +23,18 @@
       "time": { "tag": "00:10:00.000", "type": "COMMAND_RELATIVE" },
       "engine": 2,
       "sequence": "/eng/configure_imager.seq",
-      "args": [{ "string": "MOSAIC" }, { "boolean": true }, { "number": 10 }],
+      "args": [
+        { "type": "string", "value": "MOSAIC" },
+        { "type": "boolean", "value": true },
+        { "type": "number", "value": 10 }
+      ],
       "description": "Relative-timed sequence activate"
     },
     {
       "type": "command",
       "time": { "type": "EPOCH_RELATIVE", "tag": "-00:00:15.54" },
       "stem": "TAKE_IMAGE",
-      "args": [{ "string": "HI_RES" }],
+      "args": [{ "type": "string", "value": "HI_RES" }],
       "description": "Epoch-relative timed command, with metadata",
       "metadata": {
         "source": "Expanded from activity TAKE_GANYMEDE_FLYBY_IMAGE_045"
@@ -39,7 +43,10 @@
     {
       "type": "ground_block",
       "name": "process_image_data",
-      "args": [{ "string": "compression_algorithm" }, { "string": "register" }],
+      "args": [
+        { "type": "string", "value": "compression_algorithm" },
+        { "type": "string", "value": "register" }
+      ],
       "time": { "type": "COMMAND_COMPLETE" },
       "description": "Command-complete timed ground block, using parameter passing from input parameters."
     },
@@ -48,8 +55,8 @@
       "time": { "tag": "2020-174T04:40:00.000", "type": "ABSOLUTE" },
       "name": "SIMULATE_FILE_UPLINK",
       "args": [
-        { "string": "/usr/mschaffe/ganymede_flyby_046_images.seq.json" },
-        { "string": "/eng/ganymede_flyby_046_images.seq" }
+        { "type": "string", "value": "/usr/mschaffe/ganymede_flyby_046_images.seq.json" },
+        { "type": "string", "value": "/eng/ganymede_flyby_046_images.seq" }
       ],
       "description": "Ground event step, simulating a file uplink (not a real command)"
     }

@@ -1,11 +1,12 @@
 {
-  "id": "variable_argument_repeat_missing_tag",
+  "id": "variable_argument_repeat_missing_type",
   "metadata": {},
   "steps": [
     {
       "args": [
         {
-          "repeat": [[{ "number": 1 }]]
+          "type": "repeat",
+          "value": [{ "type": "number", "value": 1 }]
         }
       ]
     }

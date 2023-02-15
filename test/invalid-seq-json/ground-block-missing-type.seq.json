@@ -4,13 +4,13 @@
   "steps": [
     {
       "args": [
-        { "string": "SEQSTR" },
-        { "string": "2019-365T00:00:00" },
-        { "string": "2020-025T00:00:00" },
-        { "string": "BOTH" },
-        { "string": "" },
-        { "string": "" },
-        { "string": "real_time_cmds" }
+        { "type": "string", "value": "SEQSTR" },
+        { "type": "string", "value": "2019-365T00:00:00" },
+        { "type": "string", "value": "2020-025T00:00:00" },
+        { "type": "string", "value": "BOTH" },
+        { "type": "string", "value": "" },
+        { "type": "string", "value": "" },
+        { "type": "string", "value": "real_time_cmds" }
       ],
       "description": "Ground activity step missing type.",
       "models": [

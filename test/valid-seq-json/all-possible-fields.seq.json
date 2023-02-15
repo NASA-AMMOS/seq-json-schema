@@ -45,16 +45,17 @@
   "steps": [
     {
       "args": [
-        { "number": 30 },
-        { "number": 4.3 },
-        { "boolean": true },
-        { "string": "test_string" },
+        { "type": "number", "value": 30 },
+        { "type": "number", "value": 4.3 },
+        { "type": "boolean", "value": true },
+        { "type": "string", "value": "test_string" },
         {
-          "repeat": [
-            { "number": 10 },
-            { "string": "another_test" },
-            { "boolean": false },
-            { "repeat": [{ "number": 1 }] }
+          "type": "repeat",
+          "value": [
+            { "type": "number", "value": 10 },
+            { "type": "string", "value": "another_test" },
+            { "type": "boolean", "value": false },
+            { "type": "repeat", "value": [{ "type": "number", "value": 1 }] }
           ]
         }
       ],
@@ -89,11 +90,17 @@
     },
     {
       "args": [
-        { "number": 30 },
-        { "number": 4.3 },
-        { "boolean": true },
-        { "string": "test_string" },
-        { "repeat": [{ "number": 10 }, { "string": "another_test" }] }
+        { "type": "number", "value": 30 },
+        { "type": "number", "value": 4.3 },
+        { "type": "boolean", "value": true },
+        { "type": "string", "value": "test_string" },
+        {
+          "type": "repeat",
+          "value": [
+            { "type": "number", "value": 10 },
+            { "type": "string", "value": "another_test" }
+          ]
+        }
       ],
       "description": "Absolute-timed standard command step with all possible fields.",
       "models": [
@@ -125,13 +132,13 @@
     },
     {
       "args": [
-        { "string": "SEQSTR" },
-        { "string": "2019-365T00:00:00" },
-        { "string": "2020-025T00:00:00" },
-        { "string": "BOTH" },
-        { "string": "" },
-        { "string": "" },
-        { "string": "real_time_cmds" }
+        { "type": "string", "value": "SEQSTR" },
+        { "type": "string", "value": "2019-365T00:00:00" },
+        { "type": "string", "value": "2020-025T00:00:00" },
+        { "type": "string", "value": "BOTH" },
+        { "type": "string", "value": "" },
+        { "type": "string", "value": "" },
+        { "type": "string", "value": "real_time_cmds" }
       ],
       "description": "Ground activity step with required fields.",
       "models": [
@@ -163,8 +170,8 @@
     },
     {
       "args": [
-        { "string": "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf" },
-        { "string": "d:/tmp/eng_nom_htr_off.mod" }
+        { "type": "string", "value": "/domops/data/nsyt/189/seq/satf_sct/nsy.orf.f2_seq_eng_nom_htr_off_mod.r1.satf" },
+        { "type": "string", "value": "d:/tmp/eng_nom_htr_off.mod" }
       ],
       "description": "Ground event step with all possible fields.",
       "models": [
@@ -195,7 +202,10 @@
       "metadata": { "listfield": ["1", 2] }
     },
     {
-      "args": [{ "symbol": "Local_Var_A" }, { "symbol": "Global_Var_B" }],
+      "args": [
+        { "type": "symbol", "value": "Local_Var_A" },
+        { "type": "symbol", "value": "Global_Var_B" }
+      ],
       "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
       "engine": 2,
       "epoch": "TEST_EPOCH",

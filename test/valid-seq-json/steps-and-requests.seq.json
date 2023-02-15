@@ -48,7 +48,12 @@
   ],
   "steps": [
     {
-      "args": [{ "number": 30 }, { "number": 4.3 }, { "boolean": true }, { "string": "test_string" }],
+      "args": [
+        { "type": "number", "value": 30 },
+        { "type": "number", "value": 4.3 },
+        { "type": "boolean", "value": true },
+        { "type": "string", "value": "test_string" }
+      ],
       "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
       "engine": 2,
       "epoch": "TEST_EPOCH",
@@ -68,13 +73,11 @@
     },
     {
       "args": [
-        { "number": 30 },
-        { "number": 4.3 },
-        { "boolean": false },
-        { "string": "test_string" },
-        {
-          "symbol": "Global_Var_A"
-        }
+        { "type": "number", "value": 30 },
+        { "type": "number", "value": 4.3 },
+        { "type": "boolean", "value": false },
+        { "type": "string", "value": "test_string" },
+        { "type": "symbol", "value": "Global_Var_A" }
       ],
       "description": "Absolute-timed standard command step with all possible fields.",
       "models": [
@@ -89,8 +92,7 @@
         "tag": "2020-173T20:00:00.000",
         "type": "ABSOLUTE"
       },
-      "type": "command",
-      "args": []
+      "type": "command"
     }
   ]
 }
