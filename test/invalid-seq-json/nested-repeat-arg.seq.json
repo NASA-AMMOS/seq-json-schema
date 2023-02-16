@@ -3,7 +3,7 @@
   "metadata": {},
   "steps": [
     {
-      "args": [{ "type": "repeat", "value": [{ "type": "repeat", "value": [{ "type": "number", "value": 10 }] }] }],
+      "args": [{ "type": "repeat", "value": [[{ "type": "repeat", "value": [[{ "type": "number", "value": 10 }]] }]] }],
       "stem": "HELLO",
       "time": {
         "tag": "00:00:01",
