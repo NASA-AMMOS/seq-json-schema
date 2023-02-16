@@ -440,9 +440,6 @@
               },
               {
                 "$ref": "#/$defs/hex_argument"
-              },
-              {
-                "$ref": "#/$defs/repeat_argument"
               }
             ]
           }

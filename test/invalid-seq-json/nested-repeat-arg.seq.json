@@ -1,0 +1,15 @@
+{
+  "id": "nested-repeat-arg",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [{ "type": "repeat", "value": [{ "type": "repeat", "value": [{ "type": "number", "value": 10 }] }] }],
+      "stem": "HELLO",
+      "time": {
+        "tag": "00:00:01",
+        "type": "EPOCH_RELATIVE"
+      },
+      "type": "command"
+    }
+  ]
+}
