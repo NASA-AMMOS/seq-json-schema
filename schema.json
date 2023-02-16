@@ -422,29 +422,29 @@
           "const": "repeat"
         },
         "value": {
-          "description": "A repeat argument value, there can be a nested repeat arguments inside.",
+          "description": "A repeat argument value.",
           "type": "array",
           "items": {
-            "oneOf": [
-              {
-                "$ref": "#/$defs/string_argument"
-              },
-              {
-                "$ref": "#/$defs/number_argument"
-              },
-              {
-                "$ref": "#/$defs/boolean_argument"
-              },
-              {
-                "$ref": "#/$defs/symbol_argument"
-              },
-              {
-                "$ref": "#/$defs/hex_argument"
-              },
-              {
-                "$ref": "#/$defs/repeat_argument"
-              }
-            ]
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/string_argument"
+                },
+                {
+                  "$ref": "#/$defs/number_argument"
+                },
+                {
+                  "$ref": "#/$defs/boolean_argument"
+                },
+                {
+                  "$ref": "#/$defs/symbol_argument"
+                },
+                {
+                  "$ref": "#/$defs/hex_argument"
+                }
+              ]
+            }
           }
         }
       },

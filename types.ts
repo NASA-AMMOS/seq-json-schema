@@ -269,9 +269,9 @@ export interface RepeatArgument {
    */
   type: 'repeat';
   /**
-   * A repeat argument value, there can be a nested repeat arguments inside.
+   * A repeat argument value.
    */
-  value: (StringArgument | NumberArgument | BooleanArgument | SymbolArgument | HexArgument | RepeatArgument)[];
+  value: (StringArgument | NumberArgument | BooleanArgument | SymbolArgument | HexArgument)[][];
 }
 /**
  * Model object that be included with commands to set variables for modeling purposes only, usually to direct sequence execution down a particular branch during modeling.
