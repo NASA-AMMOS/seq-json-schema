@@ -632,6 +632,7 @@
       ]
     }
   },
+  "additionalProperties": false,
   "properties": {
     "id": {
       "description": "Unique identifier",
