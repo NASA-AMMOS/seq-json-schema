@@ -9,7 +9,7 @@ const config = {
   kit: {
     adapter: adapter(),
     paths: {
-      base: dev ? '' : '/NASA-AMMOS/seq-json-schema',
+      base: dev ? '' : '/seq-json-schema',
     },
   },
 };
