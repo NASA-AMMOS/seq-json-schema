@@ -1,0 +1,35 @@
+{
+  "name": "static-validation-site",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "dev": "vite dev",
+    "format": "prettier --plugin-search-dir . --write .",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "preview": "vite preview",
+    "sync": "svelte-kit sync"
+  },
+  "devDependencies": {
+    "@codemirror/lang-json": "^6.0.1",
+    "@sveltejs/adapter-static": "^2.0.1",
+    "@sveltejs/kit": "^1.12.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "ajv": "^8.12.0",
+    "codemirror": "^6.0.1",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.8.5",
+    "prettier-plugin-svelte": "^2.9.0",
+    "svelte": "^3.57.0",
+    "svelte-check": "^3.1.4",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1"
+  }
+}
