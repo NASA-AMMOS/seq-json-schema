@@ -113,7 +113,6 @@ export interface SeqJson {
    * Hardware commands which are not interpreted by FSW and not part of any sequence.
    */
   hardware_commands?: HardwareCommand[];
-  [k: string]: unknown;
 }
 /**
  * A range of allowable variable values between a defined min and max, inclusive. min and max must be numbers
