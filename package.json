@@ -1,6 +1,6 @@
 {
   "name": "@nasa-jpl/seq-json-schema",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "license": "MIT",
   "type": "module",
   "repository": {
@@ -15,11 +15,11 @@
     "format": "prettier --write .",
     "prepublishOnly": "npm run types",
     "test": "node --no-warnings test/test.js",
-    "types": "json2ts --input schema.json --output types.ts && npm run format"
+    "types": "node scripts/generate-types.js && npm run format"
   },
   "devDependencies": {
     "ajv": "^8.12.0",
-    "json-schema-to-typescript": "^11.0.3",
-    "prettier": "^2.8.3"
+    "json-schema-to-typescript": "^13.0.1",
+    "prettier": "^2.8.8"
   }
 }

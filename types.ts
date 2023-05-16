@@ -54,7 +54,7 @@ export type Request = {
   steps: [Step, ...Step[]];
   time?: Time;
   type: 'request';
-} & Request1;
+};
 /**
  * Description. Can be attached to any sequence step.
  */
@@ -71,13 +71,6 @@ export type Args = (
   | HexArgument
   | RepeatArgument
 )[];
-export type Request1 =
-  | {
-      [k: string]: unknown;
-    }
-  | {
-      [k: string]: unknown;
-    };
 
 export interface SeqJson {
   /**
