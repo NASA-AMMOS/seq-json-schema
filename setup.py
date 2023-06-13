@@ -1,8 +1,14 @@
+from json import loads
 from pathlib import Path
 from setuptools import setup
 
 this_directory = Path(__file__).parent
 long_description = (this_directory / 'README.md').read_text()
+
+with open(this_directory / 'package.json', 'r') as f:
+  package_json = f.read()
+
+version = loads(package_json).get('version')
 
 setup(
   author='camargo',
@@ -14,5 +20,5 @@ setup(
   name='seq-json-schema',
   packages=['seq-json-schema'],
   url='https://github.com/NASA-AMMOS/seq-json-schema',
-  version='1.0.19'
+  version=version
 )
