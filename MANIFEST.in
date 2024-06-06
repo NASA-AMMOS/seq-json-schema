@@ -1,1 +1,1 @@
-include seq-json-schema/schema.json
+include seq-json-schema/schema.json package.json

@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.0.20",
+  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.0.21",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "activate": {
