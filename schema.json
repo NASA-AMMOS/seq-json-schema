@@ -2,6 +2,44 @@
   "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.0.21",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
+    "immediate_activate": {
+      "additionalProperties": false,
+      "description": "Untimed activate object",
+      "properties": {
+        "args": {
+          "$ref": "#/$defs/args"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        },
+        "engine": {
+          "type": "integer",
+          "description": "Sequence target engine."
+        },
+        "epoch": {
+          "type": "string",
+          "description": "Onboard epoch to pass to the sequence for derivation of epoch-relative timetags"
+        },
+        "metadata": {
+          "$ref": "#/$defs/metadata"
+        },
+        "models": {
+          "items": {
+            "$ref": "#/$defs/model"
+          },
+          "type": "array"
+        },
+        "sequence": {
+          "type": "string",
+          "description": "Onboard path and filename of sequence to be loaded."
+        },
+        "type": {
+          "const": "activate"
+        }
+      },
+      "required": ["sequence", "type"],
+      "type": "object"
+    },
     "activate": {
       "additionalProperties": false,
       "description": "Activate object",
@@ -69,6 +107,30 @@
         ]
       }
     },
+    "immediate_fsw_command": {
+      "additionalProperties": false,
+      "description": "Object representing a single Immediate Command",
+      "properties": {
+        "args": {
+          "$ref": "#/$defs/args"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        },
+        "metadata": {
+          "$ref": "#/$defs/metadata"
+        },
+        "stem": {
+          "type": "string",
+          "description": "Command stem"
+        },
+        "type": {
+          "const": "command"
+        }
+      },
+      "required": ["stem", "args"],
+      "type": "object"
+    },
     "command": {
       "additionalProperties": false,
       "description": "Command object",
@@ -82,25 +144,25 @@
         "metadata": {
           "$ref": "#/$defs/metadata"
         },
+        "stem": {
+          "type": "string",
+          "description": "Command stem"
+        },
         "models": {
           "items": {
             "$ref": "#/$defs/model"
           },
           "type": "array"
         },
-        "stem": {
-          "type": "string",
-          "description": "Command stem"
-        },
         "time": {
           "$ref": "#/$defs/time"
-        },
-        "type": {
-          "const": "command"
         },
         "return_assign_to": {
           "description": "Name of a defined local variable to which the exit status of this command should be written to. For this to work, that local variable must have been defined with the 'SC_Name' property set to LCS",
           "type": "string"
+        },
+        "type": {
+          "const": "command"
         }
       },
       "required": ["stem", "args", "time", "type"],
@@ -188,6 +250,44 @@
         }
       },
       "required": ["name", "time", "type"],
+      "type": "object"
+    },
+    "immediate_load": {
+      "additionalProperties": false,
+      "description": "Untimed load object",
+      "properties": {
+        "args": {
+          "$ref": "#/$defs/args"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        },
+        "engine": {
+          "type": "integer",
+          "description": "Sequence target engine."
+        },
+        "epoch": {
+          "type": "string",
+          "description": "Onboard epoch to pass to the sequence for derivation of epoch-relative timetags"
+        },
+        "metadata": {
+          "$ref": "#/$defs/metadata"
+        },
+        "models": {
+          "items": {
+            "$ref": "#/$defs/model"
+          },
+          "type": "array"
+        },
+        "sequence": {
+          "type": "string",
+          "description": "Onboard path and filename of sequence to be loaded."
+        },
+        "type": {
+          "const": "load"
+        }
+      },
+      "required": ["sequence", "type"],
       "type": "object"
     },
     "load": {
@@ -316,27 +416,6 @@
           "$ref": "#/$defs/load"
         }
       ]
-    },
-    "immediate_command": {
-      "additionalProperties": false,
-      "description": "Object representing a single Immediate Command",
-      "properties": {
-        "args": {
-          "$ref": "#/$defs/args"
-        },
-        "description": {
-          "$ref": "#/$defs/description"
-        },
-        "metadata": {
-          "$ref": "#/$defs/metadata"
-        },
-        "stem": {
-          "type": "string",
-          "description": "Command stem"
-        }
-      },
-      "required": ["stem", "args"],
-      "type": "object"
     },
     "hardware_command": {
       "additionalProperties": false,
@@ -674,7 +753,17 @@
     "immediate_commands": {
       "description": "Immediate commands which are interpreted by FSW and not part of any sequence.",
       "items": {
-        "$ref": "#/$defs/immediate_command"
+        "oneOf": [
+          {
+            "$ref": "#/$defs/immediate_fsw_command"
+          },
+          {
+            "$ref": "#/$defs/immediate_load"
+          },
+          {
+            "$ref": "#/$defs/immediate_activate"
+          }
+        ]
       },
       "type": "array"
     },
