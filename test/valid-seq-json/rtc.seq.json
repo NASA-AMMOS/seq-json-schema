@@ -12,9 +12,18 @@
     {
       "stem": "IC",
       "args": [
-        { "type": "string", "value": "1" },
-        { "type": "number", "value": 2 },
-        { "type": "number", "value": 3.0 }
+        {
+          "type": "string",
+          "value": "1"
+        },
+        {
+          "type": "number",
+          "value": 2
+        },
+        {
+          "type": "number",
+          "value": 3.0
+        }
       ],
       "description": "immediate command",
       "metadata": {}
@@ -22,8 +31,65 @@
     {
       "stem": "NOOP",
       "description": "noop command, no arguments",
-      "metadata": { "processor": "VC1A" },
+      "metadata": {
+        "processor": "VC1A"
+      },
       "args": []
+    },
+    {
+      "stem": "NOOP",
+      "description": "noop command, no arguments, with optional type",
+      "metadata": {
+        "processor": "VC1A"
+      },
+      "args": [],
+      "type": "command"
+    },
+    {
+      "args": [
+        {
+          "type": "number",
+          "value": 30
+        }
+      ],
+      "description": "Immediate activate step.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "variable": "model_var_float",
+          "value": "1.234"
+        }
+      ],
+      "sequence": "d:/eng/test.mod",
+      "type": "activate",
+      "metadata": {
+        "metadata_arg": "metadata_value"
+      }
+    },
+    {
+      "args": [
+        {
+          "type": "number",
+          "value": 30
+        }
+      ],
+      "description": "Immediate load step.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "variable": "model_var_float",
+          "value": "1.234"
+        }
+      ],
+      "sequence": "d:/eng/test.mod",
+      "type": "load",
+      "metadata": {
+        "metadata_arg": "metadata_value"
+      }
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "id": "immediate-activate-with-time",
+  "metadata": {},
+  "immediate_commands": [
+    {
+      "args": [],
+      "sequence": "d:/eng/test.mod",
+      "description": "immediate activate with time field",
+      "type": "activate",
+      "time": {
+        "type": "COMMAND_RELATIVE"
+      }
+    }
+  ]
+}
