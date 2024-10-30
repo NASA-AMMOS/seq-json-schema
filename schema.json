@@ -144,25 +144,25 @@
         "metadata": {
           "$ref": "#/$defs/metadata"
         },
-        "stem": {
-          "type": "string",
-          "description": "Command stem"
-        },
         "models": {
           "items": {
             "$ref": "#/$defs/model"
           },
           "type": "array"
         },
+        "stem": {
+          "type": "string",
+          "description": "Command stem"
+        },
         "time": {
           "$ref": "#/$defs/time"
+        },
+        "type": {
+          "const": "command"
         },
         "return_assign_to": {
           "description": "Name of a defined local variable to which the exit status of this command should be written to. For this to work, that local variable must have been defined with the 'SC_Name' property set to LCS",
           "type": "string"
-        },
-        "type": {
-          "const": "command"
         }
       },
       "required": ["stem", "args", "time", "type"],
