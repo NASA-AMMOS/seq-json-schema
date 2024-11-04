@@ -101,7 +101,7 @@ export interface SeqJson {
   /**
    * Immediate commands which are interpreted by FSW and not part of any sequence.
    */
-  immediate_commands?: ImmediateCommand[];
+  immediate_commands?: (ImmediateFswCommand | ImmediateLoad | ImmediateActivate)[];
   /**
    * Hardware commands which are not interpreted by FSW and not part of any sequence.
    */
@@ -370,7 +370,7 @@ export interface Load {
 /**
  * Object representing a single Immediate Command
  */
-export interface ImmediateCommand {
+export interface ImmediateFswCommand {
   args: Args;
   description?: Description;
   metadata?: Metadata;
@@ -378,6 +378,51 @@ export interface ImmediateCommand {
    * Command stem
    */
   stem: string;
+  type?: 'command';
+}
+/**
+ * Untimed load object
+ */
+export interface ImmediateLoad {
+  args?: Args;
+  description?: Description;
+  /**
+   * Sequence target engine.
+   */
+  engine?: number;
+  /**
+   * Onboard epoch to pass to the sequence for derivation of epoch-relative timetags
+   */
+  epoch?: string;
+  metadata?: Metadata;
+  models?: Model[];
+  /**
+   * Onboard path and filename of sequence to be loaded.
+   */
+  sequence: string;
+  type: 'load';
+}
+/**
+ * Untimed activate object
+ */
+export interface ImmediateActivate {
+  args?: Args;
+  description?: Description;
+  /**
+   * Sequence target engine.
+   */
+  engine?: number;
+  /**
+   * Onboard epoch to pass to the sequence for derivation of epoch-relative timetags
+   */
+  epoch?: string;
+  metadata?: Metadata;
+  models?: Model[];
+  /**
+   * Onboard path and filename of sequence to be loaded.
+   */
+  sequence: string;
+  type: 'activate';
 }
 /**
  * Object representing a single Hardware Command
