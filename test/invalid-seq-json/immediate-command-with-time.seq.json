@@ -1,0 +1,17 @@
+{
+  "id": "immediate-command-with-time",
+  "metadata": {},
+  "immediate_commands": [
+    {
+      "stem": "NOOP",
+      "description": "immediate command with time field",
+      "metadata": {
+        "processor": "VC1A"
+      },
+      "args": [],
+      "time": {
+        "type": "COMMAND_COMPLETE"
+      }
+    }
+  ]
+}

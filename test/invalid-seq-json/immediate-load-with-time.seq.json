@@ -1,0 +1,15 @@
+{
+  "id": "immediate-load-with-time",
+  "metadata": {},
+  "immediate_commands": [
+    {
+      "args": [],
+      "sequence": "d:/eng/test.mod",
+      "description": "immediate load with time field",
+      "type": "load",
+      "time": {
+        "type": "COMMAND_RELATIVE"
+      }
+    }
+  ]
+}
