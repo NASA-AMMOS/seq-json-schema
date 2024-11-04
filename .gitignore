@@ -1,5 +1,6 @@
 .DS_Store
 *.egg-info
+.idea/
 seq-json-schema/*.json
 build
 dist
