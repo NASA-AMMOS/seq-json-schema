@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.1.0",
+  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.2.0",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "immediate_activate": {
@@ -34,7 +34,7 @@
           "description": "Onboard path and filename of sequence to be loaded."
         },
         "type": {
-          "const": "activate"
+          "const": "immediate_activate"
         }
       },
       "required": ["sequence", "type"],
@@ -120,12 +120,18 @@
         "metadata": {
           "$ref": "#/$defs/metadata"
         },
+        "models": {
+          "items": {
+            "$ref": "#/$defs/model"
+          },
+          "type": "array"
+        },
         "stem": {
           "type": "string",
           "description": "Command stem"
         },
         "type": {
-          "const": "command"
+          "const": "immediate_command"
         }
       },
       "required": ["stem", "args"],
@@ -284,7 +290,7 @@
           "description": "Onboard path and filename of sequence to be loaded."
         },
         "type": {
-          "const": "load"
+          "const": "immediate_load"
         }
       },
       "required": ["sequence", "type"],
