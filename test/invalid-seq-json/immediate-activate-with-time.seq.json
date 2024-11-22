@@ -6,7 +6,7 @@
       "args": [],
       "sequence": "d:/eng/test.mod",
       "description": "immediate activate with time field",
-      "type": "activate",
+      "type": "immediate_activate",
       "time": {
         "type": "COMMAND_RELATIVE"
       }

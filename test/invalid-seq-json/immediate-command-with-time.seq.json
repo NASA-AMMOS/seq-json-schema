@@ -11,7 +11,8 @@
       "args": [],
       "time": {
         "type": "COMMAND_COMPLETE"
-      }
+      },
+      "type": "immediate_command"
     }
   ]
 }
