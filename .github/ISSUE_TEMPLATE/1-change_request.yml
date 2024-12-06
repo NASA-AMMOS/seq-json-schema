@@ -32,7 +32,7 @@ body:
       value: "Changing [...] part of the specification to [...] would meet my needs because [...]"
     validations:
       required: false
-  - type: input
+  - type: textarea
     id: need-date
     attributes:
       label: Time Sensitivity/Criticality
