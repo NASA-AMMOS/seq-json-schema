@@ -14,7 +14,7 @@ If organizations must support operating different missions with different flight
 
 ## Propose a Change
 
-Interested in proposing a change to the schema? Begin by writing a change request issue. 
+Interested in proposing a change to the schema? Begin by writing a [change request issue](https://github.com/NASA-AMMOS/seq-json-schema/issues). 
 
 ## JavaScript or TypeScript
 
