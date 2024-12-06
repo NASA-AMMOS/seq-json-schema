@@ -1,0 +1,43 @@
+name: "Change Request"
+description: Propose a change to the seq-json specification
+labels: ["CR"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the initiative and proposing a change to this specification. Writing this issue is the start of specification change process outlined [here]()
+  - type: input
+    id: stakeholder
+    attributes:
+      label: Requester
+      description: Stakeholder (organization, mission, etc.) requesting this change
+      placeholder: ex. FireSat
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Description
+      description: What is the current issue with the specification that does not meet your needs? Why does it not meet your needs?
+      placeholder: Tell us the problem
+      value: "[...] part of the specification does not work for my mission, organization, flight software, etc."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Change
+      description: Describe a change to the specification that would allow for it to meet your needs.
+      placeholder: Tell us what you want
+      value: "Changing [...] part of the specification to [...] would meet my needs because [...]"
+    validations:
+      required: false
+  - type: input
+    id: need-date
+    attributes:
+      label: Time Sensitivity/Criticality
+      description: Note whether there is a time sensitivity for resolving this problem or whether this is a complete blocker for you to use the specification
+      placeholder: Tell us how important this is
+      value: "This change needs to be completed by [...] so that my mission will be ready to [...]"
+    validations:
+      required: false
