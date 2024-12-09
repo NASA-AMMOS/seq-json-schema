@@ -6,7 +6,7 @@
       "args": [],
       "sequence": "d:/eng/test.mod",
       "description": "immediate load with time field",
-      "type": "load",
+      "type": "immediate_load",
       "time": {
         "type": "COMMAND_RELATIVE"
       }

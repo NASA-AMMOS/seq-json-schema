@@ -34,6 +34,13 @@
       "metadata": {
         "processor": "VC1A"
       },
+      "models": [
+        {
+          "offset": "00:10:00.000",
+          "variable": "model_var_float",
+          "value": "1.62"
+        }
+      ],
       "args": []
     },
     {
@@ -42,8 +49,9 @@
       "metadata": {
         "processor": "VC1A"
       },
+      
       "args": [],
-      "type": "command"
+      "type": "immediate_command"
     },
     {
       "args": [
@@ -63,7 +71,7 @@
         }
       ],
       "sequence": "d:/eng/test.mod",
-      "type": "activate",
+      "type": "immediate_activate",
       "metadata": {
         "metadata_arg": "metadata_value"
       }
@@ -86,7 +94,7 @@
         }
       ],
       "sequence": "d:/eng/test.mod",
-      "type": "load",
+      "type": "immediate_load",
       "metadata": {
         "metadata_arg": "metadata_value"
       }
