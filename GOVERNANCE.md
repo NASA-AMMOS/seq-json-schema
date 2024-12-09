@@ -8,7 +8,7 @@ This community follows a fairly liberal contribution model where people and/or o
 
 ### User
 
-Operators who have authored, reviewed, or written tools that use sequence specifications under the scope of this project. These specification were primarily designed for space missions, but let us know if you've found other uses for it.
+Operators who have authored, reviewed, or written tools that use sequence specifications under the scope of this project. These specifications were primarily designed for space missions, but let us know if you've found other uses for them.
 
 ### Contributor
 
@@ -18,7 +18,7 @@ Contributors include anyone that provides input to the project. This includes co
 
 Subset of contributors who have been given write access to one or more of the repositories under the scope of this project. Both contributors and collaborators can propose changes to the project via pull requests, but only collaborators can review these requests. Any contributor who has made a non-trivial contribution should be on-boarded as a collaborator in a timely manner.
 
-If you are planning on making a substantial contribution or would like to propose a change to our specifications, please follow the [Specification Change Request Process](#specification-change-request-rrocess) below.
+If you are planning on making a substantial contribution or would like to propose a change to our specifications, please follow the [Specification Change Request Process](#specification-change-request-process) below.
 
 # Project Management Committee
 
