@@ -450,6 +450,9 @@
         },
         {
           "$ref": "#/$defs/load"
+        },
+        {
+          "$ref": "#/$defs/note"
         }
       ]
     },
