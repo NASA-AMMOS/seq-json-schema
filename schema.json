@@ -361,6 +361,36 @@
       "required": ["offset", "value", "variable"],
       "type": "object"
     },
+    "note": {
+      "additionalProperties": false,
+      "description": "Note object used to represent a SEQGEN note construct. Used by SEQGEN to output strings in the simulation results at specific times.",
+      "properties": {
+        "string_arg": {
+          "description": "Note string arg.",
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        },
+        "metadata": {
+          "$ref": "#/$defs/metadata"
+        },
+        "models": {
+          "items": {
+            "$ref": "#/$defs/model"
+          },
+          "type": "array"
+        },
+        "time": {
+          "$ref": "#/$defs/time"
+        },
+        "type": {
+          "const": "note"
+        }
+      },
+      "required": ["string_arg", "time", "type"],
+      "type": "object"
+    },
     "request": {
       "additionalProperties": false,
       "description": "Sequence steps can be grouped into a request, which can then be shifted or adjusted altogether as part of the request.",
