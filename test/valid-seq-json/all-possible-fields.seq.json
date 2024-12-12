@@ -254,11 +254,40 @@
           "time": { "tag": "00:00:01.000", "type": "COMMAND_RELATIVE" },
           "type": "command",
           "args": []
+        },
+        {
+          "description": "Note step with all possible fields.",
+          "models": [
+            {
+              "offset": "00:00:00.000",
+              "variable": "model_var_float",
+              "value": "1.234"
+            },
+            {
+              "offset": "00:00:00.001",
+              "variable": "model_var_int",
+              "value": "-1234"
+            },
+            {
+              "offset": "01:02:03.000",
+              "variable": "model_var_string",
+              "value": "Model test string"
+            },
+            {
+              "offset": "10:00:00.000",
+              "variable": "model_var_uint",
+              "value": "1234"
+            }
+          ],
+          "string_arg": "Note Test.",
+          "time": { "type": "BLOCK_RELATIVE" },
+          "type": "note",
+          "metadata": { "listfield": ["1", 2] }
         }
-      ],
-      "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
-      "type": "request"
-    },
+          ],
+          "time": { "tag": "2020-173T20:00:00.000", "type": "ABSOLUTE" },
+          "type": "request"
+        },
     {
       "description": "Ground-epoch timed request object with all possible fields",
       "ground_epoch": { "delta": "+00:30:00", "name": "test_ground_epoch" },
