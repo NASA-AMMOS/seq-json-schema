@@ -1,0 +1,35 @@
+{
+  "id": "note",
+  "metadata": {},
+  "steps": [
+    {
+      "description": "Note step with all possible fields.",
+      "models": [
+        {
+          "offset": "00:00:00.000",
+          "variable": "model_var_float",
+          "value": "1.234"
+        },
+        {
+          "offset": "00:00:00.001",
+          "variable": "model_var_int",
+          "value": "-1234"
+        },
+        {
+          "offset": "01:02:03.000",
+          "variable": "model_var_string",
+          "value": "Model test string"
+        },
+        {
+          "offset": "10:00:00.000",
+          "variable": "model_var_uint",
+          "value": "1234"
+        }
+      ],
+      "string_arg": "Note Test.",
+      "time": { "type": "COMMAND_COMPLETE" },
+      "type": "note",
+      "metadata": { "listfield": ["1", 2] }
+    }
+  ]
+}
