@@ -446,12 +446,12 @@
       "description": "Time object",
       "properties": {
         "tag": {
-          "description": "Relative or absolute time. Required for ABSOLUTE, COMMAND_RELATIVE, and EPOCH_RELATIVE time tags but not COMMAND_COMPLETE.",
+          "description": "Relative or absolute time. Required for ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, and EPOCH_RELATIVE time tags but not COMMAND_COMPLETE.",
           "type": "string"
         },
         "type": {
-          "description": "Allowed time types: ABSOLUTE, COMMAND_RELATIVE, EPOCH_RELATIVE, or COMMAND_COMPLETE.",
-          "enum": ["ABSOLUTE", "COMMAND_RELATIVE", "EPOCH_RELATIVE", "COMMAND_COMPLETE"],
+          "description": "Allowed time types: ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, EPOCH_RELATIVE, or COMMAND_COMPLETE.",
+          "enum": ["ABSOLUTE", "BLOCK_RELATIVE", "COMMAND_RELATIVE", "EPOCH_RELATIVE", "COMMAND_COMPLETE"],
           "type": "string"
         }
       },
