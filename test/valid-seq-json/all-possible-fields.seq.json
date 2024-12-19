@@ -280,7 +280,7 @@
             }
           ],
           "string_arg": "Note Test.",
-          "time": { "type": "BLOCK_RELATIVE" },
+          "time": { "type": "BLOCK_RELATIVE" , "tag":  "00:30:00"},
           "type": "note",
           "metadata": { "listfield": ["1", 2] }
         }
