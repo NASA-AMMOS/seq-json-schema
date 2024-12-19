@@ -363,7 +363,7 @@
     },
     "note": {
       "additionalProperties": false,
-      "description": "Note object used to represent a SEQGEN note construct. Used by SEQGEN to output strings in the simulation results at specific times.",
+      "description": "Used to add a note within a sequence at a specific instant. Can be used by command & sequence simulator tools to print the string argument at the relevant instant within simulations.",
       "properties": {
         "string_arg": {
           "description": "Note string arg.",
