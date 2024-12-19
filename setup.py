@@ -18,7 +18,8 @@ setup(
   long_description=long_description,
   long_description_content_type='text/markdown',
   name='seq-json-schema',
-  packages=['jsonschema', 'seq-json-schema'],
+  packages=['seq-json-schema'],
+  requires=['jsonschema'],
   url='https://github.com/NASA-AMMOS/seq-json-schema',
   version=version
 )
