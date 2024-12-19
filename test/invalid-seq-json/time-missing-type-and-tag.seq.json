@@ -1,0 +1,61 @@
+{
+  "id": "time_missing_type",
+  "metadata": {},
+  "steps": [
+    {
+      "args": [
+        { "type": "number", "value": 30 }
+      ],
+      "description": "Epoch-relative activate step for test.mod into engine 2 with missing time type.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "sequence": "d:/eng/test.mod",
+      "time": { "tag": "00:00:01.000" },
+      "type": "activate"
+    },
+    {
+      "args": [
+        { "type": "number", "value": 30 }
+      ],
+      "description": "Command-relative activate step for test.mod into engine 2 with missing time tag.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "sequence": "d:/eng/test.mod",
+      "time": { "type": "COMMAND_RELATIVE" },
+      "type": "activate"
+    },
+    {
+      "args": [
+        { "type": "number", "value": 30 }
+      ],
+      "description": "Absolute activate step for test.mod into engine 2 with missing time tag.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "sequence": "d:/eng/test.mod",
+      "time": { "type": "ABSOLUTE" },
+      "type": "activate"
+    },
+        {
+      "args": [
+        { "type": "number", "value": 30 }
+      ],
+      "description": "Block-relative activate step for test.mod into engine 2 with missing time tag.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "sequence": "d:/eng/test.mod",
+      "time": { "type": "BLOCK_RELATIVE" },
+      "type": "activate"
+    },
+        {
+      "args": [
+        { "type": "number", "value": 30 }
+      ],
+      "description": "Epoch-relative activate step for test.mod into engine 2 with missing time tag.",
+      "engine": 2,
+      "epoch": "TEST_EPOCH",
+      "sequence": "d:/eng/test.mod",
+      "time": { "type": "EPOCH_RELATIVE" },
+      "type": "activate"
+    }
+  ]
+}
