@@ -5,3 +5,4 @@ seq-json-schema/*.json
 build
 dist
 node_modules
+types.ts
