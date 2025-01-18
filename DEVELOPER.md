@@ -6,7 +6,7 @@ This repository version controls the SeqJSON schema and generates libraries to a
 
 ## Developer Workflow
 
-Once a change request has been approved for implementation and a developer has been assigned (see [Governance](GOVERNANCE.md)), make schema changes directly to [`schema.json`](schema.json). Updates to either the schema or the distribution packages merit version increments according to the [Symantic Versioning](https://semver.org/) standard. The Pull Request which makes the specified changes should increment the version in the following places:
+Once a change request has been approved for implementation and a developer has been assigned (see [Governance](GOVERNANCE.md)), make schema changes directly to [`schema.json`](schema.json). Updates to either the schema or the distribution packages merit version increments according to the [Semantic Versioning](https://semver.org/) standard. The Pull Request which makes the specified changes should increment the version in the following places:
 
 - [`package.json`](package.json)
 - [`package-lock.json`](package-lock.json)
