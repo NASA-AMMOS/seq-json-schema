@@ -1,17 +1,9 @@
 {
-  "id": "time_missing_type",
+  "id": "note",
   "metadata": {},
   "steps": [
     {
-      "args": [
-        { "type": "number", "value": 30 },
-        { "type": "number", "value": 4.3 },
-        { "type": "boolean", "value": false },
-        { "type": "string", "value": "test_string" }
-      ],
-      "description": "Epoch-relative activate step for test.mod into engine 2 with all possible fields.",
-      "engine": 2,
-      "epoch": "TEST_EPOCH",
+      "description": "Note step with all possible fields.",
       "models": [
         {
           "offset": "00:00:00.000",
@@ -34,9 +26,10 @@
           "value": "1234"
         }
       ],
-      "sequence": "d:/eng/test.mod",
-      "time": { "tag": "00:00:01.000" },
-      "type": "activate"
+      "string_arg": "Note Test.",
+      "time": { "type": "BLOCK_RELATIVE", "tag": "00:30:00" },
+      "type": "note",
+      "metadata": { "listfield": ["1", 2] }
     }
   ]
 }

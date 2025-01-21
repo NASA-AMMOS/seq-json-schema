@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.2.0",
+  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.3.0",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "immediate_activate": {
@@ -361,6 +361,36 @@
       "required": ["offset", "value", "variable"],
       "type": "object"
     },
+    "note": {
+      "additionalProperties": false,
+      "description": "Used to add a note within a sequence at a specific instant. Can be used by command & sequence simulator tools to print the string argument at the relevant instant within simulations.",
+      "properties": {
+        "string_arg": {
+          "description": "Note string arg.",
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/$defs/description"
+        },
+        "metadata": {
+          "$ref": "#/$defs/metadata"
+        },
+        "models": {
+          "items": {
+            "$ref": "#/$defs/model"
+          },
+          "type": "array"
+        },
+        "time": {
+          "$ref": "#/$defs/time"
+        },
+        "type": {
+          "const": "note"
+        }
+      },
+      "required": ["string_arg", "time", "type"],
+      "type": "object"
+    },
     "request": {
       "additionalProperties": false,
       "description": "Sequence steps can be grouped into a request, which can then be shifted or adjusted altogether as part of the request.",
@@ -420,6 +450,9 @@
         },
         {
           "$ref": "#/$defs/load"
+        },
+        {
+          "$ref": "#/$defs/note"
         }
       ]
     },
@@ -446,16 +479,30 @@
       "description": "Time object",
       "properties": {
         "tag": {
-          "description": "Relative or absolute time. Required for ABSOLUTE, COMMAND_RELATIVE, and EPOCH_RELATIVE time tags but not COMMAND_COMPLETE.",
+          "description": "Relative or absolute time. Required for ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, and EPOCH_RELATIVE time types but not COMMAND_COMPLETE.",
           "type": "string"
         },
         "type": {
-          "description": "Allowed time types: ABSOLUTE, COMMAND_RELATIVE, EPOCH_RELATIVE, or COMMAND_COMPLETE.",
-          "enum": ["ABSOLUTE", "COMMAND_RELATIVE", "EPOCH_RELATIVE", "COMMAND_COMPLETE"],
+          "description": "Allowed time types: ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, EPOCH_RELATIVE, or COMMAND_COMPLETE.",
+          "enum": ["ABSOLUTE", "BLOCK_RELATIVE", "COMMAND_RELATIVE", "EPOCH_RELATIVE", "COMMAND_COMPLETE"],
           "type": "string"
         }
       },
       "required": ["type"],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": ["ABSOLUTE", "BLOCK_RELATIVE", "COMMAND_RELATIVE", "EPOCH_RELATIVE"]
+              }
+            }
+          },
+          "then": {
+            "required": ["tag"]
+          }
+        }
+      ],
       "type": "object"
     },
     "variable_range": {
