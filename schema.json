@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.3.0",
+  "$id": "https://github.com/NASA-AMMOS/seq-json-schema/tree/v1.3.1",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$defs": {
     "immediate_activate": {
@@ -475,32 +475,33 @@
       "type": "object"
     },
     "time": {
-      "additionalProperties": false,
       "description": "Time object",
-      "properties": {
-        "tag": {
-          "description": "Relative or absolute time. Required for ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, and EPOCH_RELATIVE time types but not COMMAND_COMPLETE.",
-          "type": "string"
-        },
-        "type": {
-          "description": "Allowed time types: ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, EPOCH_RELATIVE, or COMMAND_COMPLETE.",
-          "enum": ["ABSOLUTE", "BLOCK_RELATIVE", "COMMAND_RELATIVE", "EPOCH_RELATIVE", "COMMAND_COMPLETE"],
-          "type": "string"
-        }
-      },
-      "required": ["type"],
-      "allOf": [
+      "oneOf": [
         {
-          "if": {
-            "properties": {
-              "type": {
-                "enum": ["ABSOLUTE", "BLOCK_RELATIVE", "COMMAND_RELATIVE", "EPOCH_RELATIVE"]
-              }
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "description": "Allowed time types without a tag: COMMAND_COMPLETE",
+              "enum": ["COMMAND_COMPLETE"],
+              "type": "string"
             }
           },
-          "then": {
-            "required": ["tag"]
-          }
+          "required": ["type"]
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "description": "Allowed time types with a tag: ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, EPOCH_RELATIVE.",
+              "enum": ["ABSOLUTE", "BLOCK_RELATIVE", "COMMAND_RELATIVE", "EPOCH_RELATIVE"],
+              "type": "string"
+            },
+            "tag": {
+              "description": "Relative or absolute time. Required for ABSOLUTE, BLOCK_RELATIVE, COMMAND_RELATIVE, and EPOCH_RELATIVE time types but not COMMAND_COMPLETE.",
+              "type": "string"
+            }
+          },
+          "required": ["type", "tag"]
         }
       ],
       "type": "object"
