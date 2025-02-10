@@ -2,6 +2,28 @@ import Ajv from 'ajv/dist/2020.js';
 import schema from '../schema.json' assert { type: 'json' };
 import { readdirSync, readFileSync } from 'fs';
 import { exit } from 'process';
+import packageJson from '../package.json' assert { type: 'json' };
+import lockfileJson from '../package-lock.json' assert { type: 'json' };
+
+function testVersions(failures) {
+  // Make sure version strings match
+  const schemaId = schema.$id;
+  const versionMatch = schemaId.match(/\/v(\d+\.\d+\.\d+)$/);
+  if(!versionMatch) throw "Cannot find version in schema.json $id field";
+  const schemaVersion = versionMatch ? versionMatch[1] : null;
+
+  const packageVersion = packageJson.version;
+  const lockfileVersion = lockfileJson.version;
+
+  if(schemaVersion !== packageVersion || schemaVersion !== lockfileVersion) {
+    const msg = "Versions in schema.json, package.json and package-lock.json must match";
+    failures.push(msg);
+    console.error(`❌ ${msg}`);
+    console.log(`schema version in schema.$id: ${schemaVersion}`);
+    console.log(`package.json version: ${packageVersion}`);
+    console.log(`package-lock.json version: ${lockfileVersion}`);
+  }
+}
 
 function test() {
   const ajv = new Ajv({
@@ -14,6 +36,8 @@ function test() {
   const invalidSeqJsonPath = './test/invalid-seq-json';
   const invalidSeqJsonFiles = readdirSync(invalidSeqJsonPath);
   const failures = [];
+
+  testVersions(failures);
 
   // Valid Seq JSON.
   for (const validSeqJsonFile of validSeqJsonFiles) {
