@@ -21,7 +21,7 @@ function test() {
     const valid = validate(JSON.parse(validSeqJson));
     if (!valid) {
       // most relevant errors tend to be at the bottom - reverse list
-      const errors = validate.errors.reverse();
+      const errors = validate.errors.slice().reverse();
       console.error(`❌ Failed to validate ${validSeqJsonFile} - ${errors.length} errors:`);
       console.log(errors);
       failures.push(`${validSeqJsonFile} should be valid`);
