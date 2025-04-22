@@ -69,7 +69,7 @@ If the pull request receives approval consensus, the chair will note this as a c
 
 If, at any point, disapproval consensus is achieved, the PMC chair shall note this as a comment with rationale from the PMC on the most recent submission on the topic (either issue or pull request) and close all open issues/pull requests.
 
-If, at any point, a PMC member(s) dissents from an approval consensus, they are encouraged to document their dissent in appropriate detail as a comment on the relevant submission.
+If, at any point, a PMC member(s) dissents from PMC consensus, they are encouraged to document their dissent in appropriate detail as a comment on the relevant submission.
 
 ## Acknowledgements
 
