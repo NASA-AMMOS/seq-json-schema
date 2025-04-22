@@ -65,7 +65,7 @@ The PMC chair or their delegate will review the submission. If the change reques
 
 Once implementation is complete, the implementer will submit a pull request and reference the original issue within that request. PMC members representing all stakeholder missions and sponsor organizations shall engage to approve, disapprove, or request additional clarification from the submitter and/or implementer. The PMC chair will work with the PMC, submitter, and implementer until an approval or disapproval consensus can be determined. Approval consensus may comprise pull request approvals by at least one representative from each stakeholder mission and sponsor organization or by note from the PMC chair following other equivalent discussion/communication.
 
-If the pull request receives approval consensus, the chair will note this as a comment on the pull request. The PMC chair should note impacts of the change based on input from the PMC on the pull request, and any impacts should also be included in the following release documentation.
+If the pull request receives approval consensus, the chair will note this as a comment on the pull request and merge the change. The PMC chair should note impacts of the change based on input from the PMC on the pull request, and any impacts should also be included in the following release documentation.
 
 If, at any point, disapproval consensus is achieved, the PMC chair shall note this as a comment with rationale from the PMC on the most recent submission on the topic (either issue or pull request) and close all open issues/pull requests.
 
