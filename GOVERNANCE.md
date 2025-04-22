@@ -50,7 +50,7 @@ The PMC shall self-select a chair to lead and organize the committee. A new chai
 
 The PMC chair or their delegate (who must also be a PMC member) shall:
 
-- Shepherd change requests to the SeqJSON schema through disposition and implementation
+- Shepherd change requests to the controlled specifications through disposition and implementation
 - Schedule ad hoc meetings to discuss change requests or issues to get PMC consensus when necessary 
 - Hold quarterly meetings open to the community to provide status on recent updates and/or change requests, get community input on how specifications are being used, and receive feedback on how to improve them. 
 - On-board new PMC members when appropriate (e.g. new stakeholder, change in organization/mission representative)
